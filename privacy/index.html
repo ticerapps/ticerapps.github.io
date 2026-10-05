@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy information for Minesweeper: Strait of Hormuz, including game progress, Play Games, purchases, advertising, and your choices.">
+  <meta name="description" content="Privacy information for Minesweeper: Strait of Hormuz, including Android and Apple game progress, purchases, advertising, and your choices.">
   <meta name="referrer" content="no-referrer">
   <title>Privacy Policy — Minesweeper: Strait of Hormuz | Ticer Apps</title>
   <link rel="canonical" href="https://ticerapps.github.io/privacy/">
@@ -15,12 +15,13 @@
     <header>
       <a class="tag" href="/">Ticer Apps</a>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective and last updated: September 25, 2026</p>
-      <p><strong>Ticer Apps</strong> ("we," "us," or "our") provides <strong>Minesweeper: Strait of Hormuz</strong>. This policy covers the Android game and this website. For privacy requests, contact <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a>.</p>
+      <p class="meta">Effective and last updated: October 4, 2026</p>
+      <p><strong>Ticer Apps</strong> ("we," "us," or "our") provides <strong>Minesweeper: Strait of Hormuz</strong>. This policy covers the Android, iOS/iPadOS, and native macOS versions of the game, including test builds, and this website. For privacy requests, contact <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a>.</p>
     </header>
 
     <div class="summary">
-      <p><strong>At a glance:</strong> progress is saved on your device and can be backed up through Google Play Games. Google Play and RevenueCat handle purchases and purchased access. Google AdMob and its consent tools handle advertising. No separate Ticer Apps account is required. Features may vary by build, connection, and region; test ads also connect to Google.</p>
+      <p><strong>At a glance:</strong> progress is saved on your device. Android supports Google Play Games backup; supported Apple test builds offer optional Game Center and iCloud saves. Google Play or Apple's App Store and RevenueCat handle purchases where enabled. Android and iOS/iPadOS builds integrate Google AdMob and its consent tools. No separate Ticer Apps account is required.</p>
+      <p><strong>Platform differences:</strong> Apple cloud saves are currently available in internal/TestFlight builds, not the public iOS store configuration. Native macOS builds currently have no AdMob or RevenueCat purchase integration. An iPhone/iPad app running on an Apple Silicon Mac still uses the iOS integrations. Availability varies by build, connection, region, and privacy choices. Test ads and sandbox purchases can still contact their providers.</p>
     </div>
 
     <nav class="section-nav" aria-label="Privacy policy sections">
@@ -37,20 +38,23 @@
       <p>The game stores progress, XP, ranks, statistics, match history, puzzle completion, earned items, settings, unfinished games, and reward limits on your device. Recovery copies help protect against interrupted saves.</p>
       <p><strong>Google Play Games:</strong> the game checks the signed-in Play Games profile and may offer Google's sign-in flow. It uses your player identifier, display name, and account-derived identifiers to show connection status and keep progress associated with the correct account. When connected, supported progress, statistics, earned inventory, and reward history are backed up automatically through Google's Saved Games service. Offline changes remain local until syncing can resume.</p>
       <p>Changing Play Games accounts switches the associated progress. Separate local account copies and recovery information may be retained so switching or interrupted syncing does not discard progress. Account-derived identifiers are linkable identifiers, not anonymous data. Preferences and unfinished games are not included in this progress backup. Purchased access is verified separately.</p>
-      <p>We do not operate a separate game-save server. Google processes Play Games and saved-game information under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+      <p><strong>Apple Game Center and iCloud, where enabled:</strong> connecting lets the game check Game Center sign-in and iCloud availability and read the game's saved progress. The integration uses your game-scoped player identifier and a local iCloud account marker to keep saves associated with the correct accounts. An account-derived identifier accompanies the saved progress; it is linkable data, not anonymous data. The game does not request your Apple Account password, email address, contacts, or Game Center friends list.</p>
+      <p>Apple backups contain supported progress, XP, puzzle completion, statistics, earned inventory, reward history, and save-version information. Uploading or restoring a save requires your choice. After you enable automatic sync, completed progress can transfer while the game is on Home. Conflicting changes require a save choice. Paid entitlements, device preferences, and unfinished matches are kept separately. Local backups and account-binding records protect against interrupted transfers and accidental account changes.</p>
+      <p>We do not operate a separate game-save server or receive these backups on a Ticer Apps server. Google and Apple provide the respective cloud services under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
     </section>
 
     <section id="advertising">
       <h2>2. Advertising and consent</h2>
-      <p>The game uses <strong>Google AdMob</strong> for between-match and optional rewarded ads, and <strong>Google's User Messaging Platform (UMP)</strong> for consent and privacy choices. These services may process:</p>
+      <p>Android and iOS/iPadOS builds use <strong>Google AdMob</strong> for between-match and optional rewarded ads, and <strong>Google's User Messaging Platform (UMP)</strong> for consent and privacy choices. These services may process:</p>
       <ul>
         <li>IP address and approximate location derived from it.</li>
-        <li>Device and applicable account identifiers, including advertising and app set IDs.</li>
-        <li>App/ad interactions and diagnostic or performance information.</li>
+        <li>Device identifiers, such as Android advertising/app set IDs, Apple's advertising identifier (IDFA) when permitted, and applicable app- or developer-scoped identifiers.</li>
+        <li>App/ad interactions, ads viewed, crash information, and diagnostic or performance information.</li>
         <li>Information needed to present privacy messages and record your choices.</li>
       </ul>
-      <p>Google and advertising partners use this information for ad delivery, measurement, and fraud prevention. The game does not pass its save payload or your email address to the advertising integration. Play Games backup is a separate Google service.</p>
+      <p>Google and advertising partners use this information for ad delivery, advertising measurement, analytics, and fraud prevention. The game does not pass its save payload or your email address to the advertising integration. Cloud backup and purchase verification are separate integrations; the game does not send their account identifiers or purchase records to AdMob.</p>
       <p>The game checks UMP eligibility before requesting ads. Depending on your choices and applicable requirements, ads may be personalized, non-personalized, limited, or unavailable. Non-personalized and test ads can still process data. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Available consent messages identify advertising partners and choices.</p>
+      <p><strong>Apple tracking permission:</strong> when applicable, Apple's App Tracking Transparency prompt asks whether the app may track activity across other companies' apps and websites for advertising or ad measurement. You can decline and keep playing. Google handles ad requests without IDFA when permission is not granted. Declining tracking is separate from Google's regional consent choices and does not stop every connection or all non-tracking processing.</p>
       <p>We do not sell game-save data or support messages. Advertising activity may qualify as sharing or targeted advertising under some laws; available controls are described below.</p>
     </section>
 
@@ -63,26 +67,28 @@
 
     <section id="purchases">
       <h2>4. Purchases</h2>
-      <p><strong>Google Play Billing</strong> processes Android purchases. <strong>RevenueCat</strong> verifies purchases, restores purchased access, and keeps entitlement status current, including refunds or revocations. This involves purchase tokens, product and transaction information, purchase history, and a RevenueCat-generated customer identifier. RevenueCat also processes technical information associated with its service, such as app/device information and service activity.</p>
-      <p>The game does not supply a custom customer login to RevenueCat; its generated identifier is separate from the Play Games identity used for progress. RevenueCat may process customer information when the purchase SDK connects, even if no purchase is completed. We may access purchase/customer records in its dashboard for purchase support and management. We do not receive your full payment-card details.</p>
-      <p>Deleting game progress does not remove purchases or erase billing records. Google and RevenueCat retain information according to their roles, policies, and applicable obligations. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>.</p>
+      <p><strong>Google Play Billing</strong> processes Android purchases; <strong>Apple StoreKit and the App Store</strong> process iOS/iPadOS purchases. <strong>RevenueCat</strong> verifies purchases, restores purchased access, and keeps entitlement status current, including refunds or revocations. This involves store receipts or purchase tokens, product and transaction information, purchase history, and a RevenueCat-generated customer identifier. Purchase reporting also supports RevenueCat dashboard analytics. RevenueCat also processes technical information associated with its service, such as app/device information and service activity.</p>
+      <p>The game does not supply a custom customer login to RevenueCat; its generated identifier is separate from the Play Games or Game Center identity used for progress. We do not supply RevenueCat with your email address, name, Game Center identity, or advertising identifier, or enable advertising-attribution integrations through this game. RevenueCat may process customer information when the purchase SDK connects, even if no purchase is completed. We may access purchase/customer records in its dashboard for purchase support and management. We do not receive your full payment-card details.</p>
+      <p>Deleting game progress does not remove purchases or erase billing records. The relevant store and RevenueCat retain information according to their roles, policies, and applicable obligations. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>, and <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>.</p>
     </section>
 
     <section id="choices">
       <h2>5. Your choices and controls</h2>
       <ul>
-        <li><strong>Ad privacy:</strong> use Google's consent message or <strong>Settings → GAME → LEGAL → PRIVACY OPTIONS</strong> when available. Declining consent does not prevent gameplay. Android also provides advertising-ID controls.</li>
+        <li><strong>Ad privacy:</strong> use Google's consent message or <strong>Settings → PRIVACY → PRIVACY OPTIONS</strong> when available. Declining consent does not prevent gameplay. Older builds may place this under GAME → LEGAL. Android also provides advertising-ID controls. On iPhone/iPad, manage tracking permission in device Settings → Privacy &amp; Security → Tracking.</li>
         <li><strong>Optional ads:</strong> rewarded ads are optional. Remove Ads suppresses between-match ads, but does not disable optional rewarded ads or all SDK/consent processing.</li>
         <li><strong>Play Games:</strong> manage the account used for the game through Google's Play Games account settings. Offline play saves locally; supported features such as cloud backup and care-package opening require a connection.</li>
-        <li><strong>Reset progress:</strong> use <strong>Settings → GAME → GAME PROGRESS → REVIEW RESET…</strong>, then confirm <strong>DELETE PROGRESS</strong>. This resets progression for the active profile on the device and in that Play Games account's cloud save. Purchases are kept. It does not delete your Google account or another account's progress. New progress may be backed up afterward.</li>
-        <li><strong>Remove local copies:</strong> clear app storage or uninstall using your device's controls. This does not delete cloud saves or purchase records. Exported files and external backups must be removed separately; operating-system behavior may vary.</li>
-        <li><strong>Other requests:</strong> email <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a> to request access, correction, or deletion of information handled by us or on our behalf, including purchase-support records. We can help identify provider controls for records held independently by Google, RevenueCat, or GitHub.</li>
+        <li><strong>Apple cloud saves:</strong> in builds that offer it, use <strong>Settings → GAME → ICLOUD SAVE</strong> to check or manage saves, or turn <strong>AUTOMATIC SYNC</strong> off. Turning sync off does not erase the cloud copy or the local account link, and manually checking saves still contacts Apple. Game Center and iCloud accounts are managed in your device's settings. For cloud-data removal, use available Apple storage controls or contact us for guidance; uninstalling or signing out alone is not a cloud-deletion request.</li>
+        <li><strong>Restore purchases:</strong> use <strong>Settings → GAME → RESTORE PURCHASES</strong> with the store account that bought the items. This restores purchased access, not game progress.</li>
+        <li><strong>Android progress reset:</strong> use <strong>Settings → GAME → GAME PROGRESS → REVIEW RESET…</strong>, then confirm <strong>DELETE PROGRESS</strong>. This resets progression for the active profile on the device and in that Play Games account's cloud save. Purchases are kept. It does not delete your Google account or another account's progress. New progress may be backed up afterward.</li>
+        <li><strong>Remove local copies:</strong> clear app storage or delete the app using your device's controls. On iPhone/iPad, offloading an app keeps its documents and data; it is different from deleting the app. This does not delete cloud saves or purchase records. Exported files and external backups must be removed separately; operating-system behavior may vary.</li>
+        <li><strong>Other requests:</strong> email <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a> to request access, correction, or deletion of information handled by us or on our behalf, including purchase-support records. We can help identify provider controls for records held independently by Apple, Google, RevenueCat, or GitHub.</li>
       </ul>
     </section>
 
     <section id="retention">
       <h2>6. Retention, security, and transfers</h2>
-      <p>Local saves, account copies, and recovery data remain until replaced or removed. Cloud progress remains until replaced or reset. A progress reset can retain limited account/history metadata to prevent older saves from restoring deleted progress; recovery copies and provider backups may also remain. It is not a promise of immediate erasure of every copy.</p>
+      <p>Local saves, account copies, and recovery data remain until replaced or removed. Cloud progress remains until replaced, reset, or removed using the applicable service. Turning automatic sync off does not remove existing cloud progress. A progress reset can retain limited account/history metadata to prevent older saves from restoring deleted progress; recovery copies and provider backups may also remain. It is not a promise of immediate erasure of every copy.</p>
       <p>Support and purchase-related information is retained as needed to provide support, maintain purchased access, prevent fraud, resolve disputes, and meet applicable obligations. Service providers apply their own retention practices to information they control. Contact us about deletion requests and any applicable exceptions.</p>
       <p>The game uses operating-system app-storage protections and provider security measures. The website uses HTTPS. No storage or transmission method is completely secure. Providers may process information in other countries under their policies and applicable transfer safeguards.</p>
     </section>
@@ -101,7 +107,7 @@
 
     <section id="changes">
       <h2>9. Policy updates</h2>
-      <p>We will update this page and its date when practices change, and provide additional notice or obtain consent where required. This policy does not describe planned features on other platforms as active.</p>
+      <p>We will update this page and its date when practices change, and provide additional notice or obtain consent where required. Platform-specific and test-only features are identified above; a feature being described here does not mean it is enabled in every build.</p>
     </section>
 
     <section class="contact" id="contact">
