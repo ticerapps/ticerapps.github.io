@@ -45,10 +45,86 @@ section { scroll-margin-top: 24px; }
 .contact { overflow-wrap: anywhere; }
 .skip { position: absolute; left: 16px; top: -100px; background: var(--panel); padding: 8px 16px; }
 .skip:focus { top: 8px; }
+.game-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; }
+.quilt-spotlight { display: grid; grid-template-columns: 112px 1fr; gap: 24px; background: #f9f1e3; border-color: #e5cc99; color: #332a25; }
+.spotlight-icon { width: 112px; height: 112px; border-radius: 24px; }
+.quilt-spotlight h2 { font-family: inherit; font-size: 1.7rem; }
+.quilt-spotlight p { color: #675c51; }
+.quilt-spotlight a { color: #226c62; }
+.quilt-spotlight a:hover { color: #10493f; }
+.quilt-spotlight .badge { color: #756238; font-size: .75rem; }
+
+/* Quilt Bee shares the site structure, with the game's warmer palette. */
+.quilt { color-scheme: light; --bg: #fcf8ef; --panel: #fffdf8; --border: #dfd4c2; --ink: #3a302a; --dim: #716557; --accent: #237c70; --gold: #ac7332; background-image: radial-gradient(ellipse at 85% 0, #ede9d2 0, transparent 45%); }
+.quilt .tag, .quilt h1, .quilt h2, .quilt .links, .quilt .badge { font-family: inherit; }
+.quilt a:hover { color: #124e47; }
+.quilt .wrap { max-width: 1050px; padding-top: 28px; }
+.quilt .site-nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.quilt .brand { font-weight: 750; color: var(--ink); text-decoration: none; letter-spacing: -.02em; }
+.quilt .site-nav .links { gap: 10px 24px; }
+.quilt .site-nav .links a { text-decoration: none; }
+.quilt .hero { display: grid; grid-template-columns: 1fr 300px; align-items: center; gap: 54px; padding: 68px 0 58px; }
+.quilt .eyebrow { color: var(--accent); font-weight: 700; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+.quilt h1 { color: var(--ink); font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 800; letter-spacing: -.055em; line-height: 1.05; margin: 17px 0; }
+.quilt .hero .lead { max-width: 510px; font-size: 1.25rem; line-height: 1.6; color: var(--dim); }
+.quilt .hero-icon { display: block; width: 100%; height: auto; border-radius: 26%; box-shadow: 0 24px 42px -20px #183f3650; transform: rotate(3deg); }
+.quilt .status-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 6px 13px; border: 1px solid #dfd1b7; border-radius: 30px; color: #75603b; background: #f5ecda; font-size: .8rem; font-weight: 650; }
+.quilt .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #b88430; }
+.quilt .actions { display: flex; flex-wrap: wrap; gap: 12px 22px; align-items: center; margin: 25px 0 18px; }
+.quilt .button { display: inline-block; padding: 11px 21px; background: var(--accent); border: 1px solid var(--accent); border-radius: 12px; color: white; text-decoration: none; font-weight: 650; }
+.quilt .button:hover { color: white; background: #195f56; }
+.quilt .availability { color: var(--dim); font-size: .875rem; }
+.quilt .intro-line { display: flex; flex-wrap: wrap; gap: 10px 30px; padding: 18px 0; border-block: 1px dashed #ccbba3; color: var(--dim); font-size: .9rem; }
+.quilt .intro-line span::before { content: '✦'; color: #c68f42; margin-right: 9px; }
+.quilt .section-heading { margin: 46px 0 24px; padding: 0; border: 0; font-size: 1.9rem; font-weight: 750; letter-spacing: -.03em; }
+.quilt .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.quilt .feature { background: var(--panel); border: 1px solid var(--border); border-radius: 20px; padding: 25px 24px; }
+.quilt .feature:nth-child(2) { background: #f2f4e9; }
+.quilt .feature:nth-child(3) { background: #fff1e5; }
+.quilt .feature .number { display: block; color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .08em; }
+.quilt .feature h3 { font-size: 1.2rem; margin: 14px 0 10px; line-height: 1.35; }
+.quilt .feature p { font-size: .95rem; color: var(--dim); margin-bottom: 0; }
+.quilt .support-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 44px; padding: 34px; background: #eaf1e8; border: 1px solid #cdddcf; border-radius: 22px; }
+.quilt .support-panel h2 { margin: 0 0 12px; padding: 0; border: 0; font-size: 1.6rem; letter-spacing: -.025em; }
+.quilt .support-panel p { color: #566757; }
+.quilt .support-panel .contact { font-weight: 650; }
+.quilt .support-note { font-size: .9rem; }
+.quilt footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; }
+.quilt .policy { max-width: 830px; }
+.quilt .policy header { margin-top: 42px; }
+.quilt .policy h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); }
+.quilt .policy h2 { margin-top: 34px; font-size: 1.3rem; letter-spacing: -.015em; }
+.quilt .policy .summary { border-radius: 16px; }
+.quilt .policy .section-nav { font-size: .92rem; }
+.quilt .policy .table-scroll { overflow-x: auto; margin: 20px 0; }
+.quilt .policy table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+.quilt .policy th, .quilt .policy td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); padding: 12px 14px 12px 0; }
+.quilt .policy th { font-weight: 750; }
+@media (max-width: 760px) {
+  .quilt .hero { grid-template-columns: 1fr 190px; gap: 32px; padding-block: 46px; }
+  .quilt .feature-grid { grid-template-columns: 1fr; }
+  .quilt .feature { padding: 23px 25px; }
+  .quilt .support-panel { grid-template-columns: 1fr; gap: 8px; padding: 28px; }
+}
+@media (max-width: 540px) {
+  .quilt .hero { grid-template-columns: 1fr; gap: 27px; padding-top: 32px; }
+  .quilt .hero-art { order: -1; width: 152px; }
+  .quilt .hero-icon { border-radius: 25%; transform: rotate(0); }
+  .quilt .hero h1 { font-size: 3.3rem; }
+  .quilt .hero .lead { font-size: 1.12rem; }
+  .quilt .site-nav .links { gap: 10px 15px; font-size: .85rem; }
+  .quilt .intro-line { gap: 8px 20px; }
+  .quilt-spotlight { grid-template-columns: 1fr; gap: 12px; }
+  .spotlight-icon { width: 104px; height: 104px; }
+}
 @media (max-width: 480px) { .wrap { padding: 32px 20px 48px; } .card, .summary { padding: 20px; } }
 @media print {
   :root { color-scheme: light; --bg: white; --panel: white; --border: #777; --ink: #111; --dim: #333; --accent: #145636; --gold: #594300; }
   .wrap { max-width: none; padding: 0; }
   .skip, .section-nav { display: none; }
   h2, h3 { break-after: avoid; }
+  .quilt { background: white; }
+  .quilt .wrap { max-width: none; }
+  .quilt .hero-icon { box-shadow: none; transform: none; }
+  .quilt .site-nav, .quilt .actions { display: none; }
 }
