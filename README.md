@@ -7,6 +7,9 @@ third-party fonts, or trackers are added by this site.
 - `/quilt-bee/`: Quilt Bee product information and support. The app is in testing;
   do not add internal testing links or imply public store availability.
 - `/quilt-bee/privacy/`: Quilt Bee's app-specific privacy policy.
+- `/quilt-bee/delete-data/`: email-based request instructions for Quilt Bee online
+  identity and leaderboard deletion. This is a request route, not an automatic
+  deletion form; local reset does not erase Firebase records.
 - `/privacy/`: existing Minesweeper: Strait of Hormuz privacy policy. Keep this
   published URL stable for existing app/store links.
 - `/app-ads.txt`: authorized advertising seller declaration; retain the existing
