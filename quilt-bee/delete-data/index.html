@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="How to request deletion of Quilt Bee account and leaderboard data from Ticer Apps, and what local reset and platform controls remove.">
+  <meta name="description" content="Delete current Quilt Bee saved progress and inventory or request removal of retained earlier online records. Learn what remains and how cloud changes sync.">
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#fcf8ef">
   <title>Request data deletion — Quilt Bee | Ticer Apps</title>
@@ -22,33 +22,42 @@
       <header>
         <span class="eyebrow">Quilt Bee</span>
         <h1>Request data deletion</h1>
-        <p class="meta">Last updated: October 11, 2026</p>
-        <p>You can ask <strong>Ticer Apps</strong> to delete the Quilt Bee online identity and leaderboard information we control. You do not need to install or open the game to send a request.</p>
+        <p class="meta">Last updated: October 15, 2026</p>
+        <p>Current v1 builds let you delete the selected player’s supported game saves in <strong>Settings → Delete player data</strong>. You can also contact <strong>Ticer Apps</strong> about information we control, including records retained from earlier internal leaderboard builds. You do not need to install the game to send a request.</p>
       </header>
       <div class="summary">
-        <p><strong>Send your request to <a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20data%20deletion%20request">ticerapps@gmail.com</a></strong> with the subject “Quilt Bee data deletion request.” This opens your email app; nothing is sent until you send the message.</p>
-        <p>Please tell us your Game Center or Play Games nickname, whether you play on Apple or Android, and what you want deleted. If your nickname has changed, include the previous one if you know it. Do not send passwords, sign-in codes, payment-card numbers, or account credentials.</p>
+        <p><strong>Email <a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20data%20deletion%20request">ticerapps@gmail.com</a></strong> with the subject “Quilt Bee data deletion request.” Opening this link does not send a message until you send it yourself.</p>
+        <p>Tell us whether you play on Apple or Android, the Game Center or Play Games nickname used, and what you want deleted. Include a previous nickname if relevant. Do not send passwords, sign-in codes, payment-card details, or account credentials.</p>
       </div>
-      <section>
-        <h2>What happens next</h2>
-        <p>We use the information you provide to find the relevant records. A nickname alone may not identify a player uniquely, so we may ask for reasonable additional information to verify that the records belong to you before changing or deleting them. Please do not send sensitive information unless it is necessary for that verification.</p>
-        <p>You may request deletion of all Quilt Bee online identity and leaderboard records associated with your verified player identity, or identify particular records you want removed. We will explain the outcome and any information that must be retained, where applicable. We handle requests under applicable requirements; submitting this request does not instantly erase data.</p>
+      <section id="in-app">
+        <h2>Delete current saved player data in the app</h2>
+        <p>Open <strong>Settings → Delete player data</strong> and check the profile shown before confirming. For a connected player, this resets their local game progress and wallet and records the reset in their supported iCloud or Play Games saves. It includes scores, Daily history, streaks, coins, saved helper extras, and coin-unlocked palettes, accents, finishes, and clear effects. Gameplay and reminder settings reset; your age-group choice is retained.</p>
+        <p>Other players’ saves and wallets remain. Your gaming account, platform achievements, and permanent purchase ownership remain. Restoring purchases does not grant consumable packs again. Cloud sync stays disconnected until you explicitly reconnect. If the operation cannot finish, follow its retry instructions.</p>
+        <p>For a guest, deletion clears local guest data and a legacy guest cloud save if available. It does not delete a signed-in player’s save. Connect the relevant gaming profile to delete its supported saved data.</p>
+        <p>Platform cloud changes require the service and a connection. iCloud first accepts a change into its local cache and later delivers it to other devices; completion is not an immediate remote-device erasure confirmation. On iCloud, older per-device wallet copies may remain until replaced or removed; current builds ignore those older copies after receiving the deletion marker. The game retains markers needed to prevent old saves or transactions from recreating deleted progress or duplicate rewards.</p>
+        <p><strong>This current v1 action does not delete Firebase identities or public scores from earlier builds.</strong> Current v1 has no Firebase integration or public leaderboard feature. Use the email request above for those earlier records, including any unfinished deletion reported by the app.</p>
       </section>
-      <section>
-        <h2>What we can remove</h2>
+      <section id="requests">
+        <h2>What happens after a request</h2>
+        <p>We use the information you provide to locate records and verify that they belong to you. A nickname alone may not identify someone uniquely, so we may ask for reasonable additional information. We will explain what we removed and any information that must remain, where applicable. Sending an email does not instantly erase data.</p>
+        <p>You can request access, correction, or deletion of information we control or that providers process on our behalf. For information a platform independently controls, we can help identify its account and privacy tools. If you are a parent or guardian making a request for a child, tell us that in your message.</p>
+      </section>
+      <section id="legacy">
+        <h2>Earlier leaderboard and Firebase records</h2>
+        <p>Earlier internal builds used Firebase to connect a gaming identity to shared rankings. Removing that integration from current v1 did not remove previously hosted records. Following verification, requests can cover:</p>
         <ul>
-          <li>The Quilt Bee Firebase user record that connects your platform gaming identity to our online service.</li>
-          <li>Your shared leaderboard entries, including your gaming name, country and platform information, Endless scores, monthly totals, and the Daily scores stored for those totals.</li>
-          <li>Associated user-linked request-limit records and, where applicable, support or purchase-support information processed for us.</li>
+          <li>The Quilt Bee Firebase user record associated with the gaming identity.</li>
+          <li>Shared leaderboard records, including names, country and platform information, Endless scores, monthly or older weekly totals, and Daily results stored for those totals.</li>
+          <li>The associated personal leaderboard request counter and, where applicable, support or purchase-support information processed for us.</li>
         </ul>
-        <p>We may need to retain limited records for security, fraud prevention, transaction obligations, legal requirements, or to document the request. Provider logs, backups, and independently controlled store records are subject to their own retention and deletion processes; they are not necessarily erased immediately with a leaderboard entry. Our <a href="/quilt-bee/privacy/#retention">privacy policy</a> explains retention in more detail.</p>
-        <p>If you connect the game again after deletion, a new online identity can be created and eligible scores still saved on your devices or platform cloud can be submitted again. Let us know if you need help removing those saved sources as part of your request.</p>
+        <p>The earlier deletion system retains limited linkable security markers to prevent old clients and requests from restoring removed records: a keyed hash derived from the gaming identity, deletion version and state, and hashes of erased Firebase identifiers. These have no automatic expiry and do not include gaming names or scores. Unfinished cleanup can retain an identifier and request reference needed to finish it. Separate abuse-prevention counters have a two-day expiry setting with asynchronous cleanup. Provider logs, backups, and independently held records follow their own processes.</p>
+        <p>Tell us which builds and devices you use so we can distinguish retained records from older clients that may still connect to the earlier service. Old entries on Game Center or Play Games’ own leaderboards are controlled separately by Apple or Google. More details are in the <a href="/quilt-bee/privacy/#legacy">privacy policy</a>.</p>
       </section>
-      <section>
-        <h2>Device progress and other providers</h2>
-        <p><strong>Settings → Reset current player data</strong> resets the current player’s local progress and this device’s settings and inventory, and attempts to clear the current platform cloud save. It does <strong>not</strong> delete our Firebase identity or leaderboard records. Another device can retain progress and sync it back. Deleting the app or clearing its storage also does not erase every cloud record.</p>
-        <p>We cannot delete your Apple Account, Google Account, Game Center or Play Games profile, platform achievements, or store payment records. Apple and Google provide their own account and data controls. Eligible permanent purchases can be restored; resetting progress does not regrant spent coins or helper packs. Purchase providers may retain records needed for ownership, billing, fraud prevention, or legal duties.</p>
-        <p>For help with any of these steps, email <a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20privacy%20request">ticerapps@gmail.com</a>. We will help distinguish the records we manage from those a platform provider controls.</p>
+      <section id="limits">
+        <h2>Purchases, backups, and other providers</h2>
+        <p>Deleting Quilt Bee player data does not delete an Apple Account, Google Account, Game Center or Play Games profile, platform achievements, store billing records, or RevenueCat purchase records. Permanent products remain owned and can be restored. Stores and purchase providers may retain information for ownership, billing, fraud prevention, or legal purposes.</p>
+        <p>Deleting the app or clearing its storage is different from deleting supported cloud saves. Offloading an iOS app retains its data. Cloud copies, independent device backups, and recovery copies of damaged local saves can remain; damaged-save recovery copies are not automatically restored. Device permissions and provider advertising records are managed separately.</p>
+        <p>We may retain information needed to handle the request, prevent abuse, or meet applicable obligations. See the <a href="/quilt-bee/privacy/#retention">retention information</a>. For help distinguishing these records, email <a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20privacy%20request">ticerapps@gmail.com</a>.</p>
       </section>
     </main>
     <footer><span>© 2026 Ticer Apps</span><a href="/quilt-bee/privacy/">Read the privacy policy</a></footer>

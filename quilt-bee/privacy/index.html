@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Quilt Bee’s privacy policy: game progress, cloud saves, leaderboards, optional location, purchases, advertising, reminders, and your choices.">
+  <meta name="description" content="Quilt Bee’s privacy policy: local and platform cloud saves, purchases, age-based ad privacy choices, reminders, and deletion requests.">
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#fcf8ef">
   <title>Privacy Policy — Quilt Bee | Ticer Apps</title>
@@ -16,139 +16,116 @@
   <div class="wrap policy">
     <nav class="site-nav" aria-label="Site navigation">
       <a class="brand" href="/">Ticer Apps</a>
-      <div class="links">
-        <a href="/quilt-bee/">Quilt Bee</a>
-        <a href="/quilt-bee/#support">Support</a>
-      </div>
+      <div class="links"><a href="/quilt-bee/">Quilt Bee</a><a href="/quilt-bee/#support">Support</a></div>
     </nav>
     <main id="main">
       <header>
         <span class="eyebrow">Quilt Bee</span>
         <h1>Privacy policy</h1>
-        <p class="meta">Effective and last updated: October 11, 2026</p>
-        <p><strong>Ticer Apps</strong> (“we,” “us,” or “our”) provides <strong>Quilt Bee</strong>. This policy describes information used by the iOS/iPadOS and Android game, including test builds, and these Quilt Bee web pages. Contact us at <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a> for support or privacy requests.</p>
+        <p class="meta">Last updated: October 15, 2026</p>
+        <p><strong>Ticer Apps</strong> (“we,” “us,” or “our”) provides <strong>Quilt Bee</strong>. This policy describes information used by the game on Apple and Android devices, including test builds, and these Quilt Bee web pages. Contact <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a> for support or privacy requests.</p>
       </header>
-
       <div class="summary">
-        <p><strong>The essentials:</strong> your game saves progress on your device. Apple or Google game services can sync supported scores and daily results and record achievements. Our shared leaderboards use Google Firebase and show players from both platforms. Country rankings use optional location permission. Apple or Google and RevenueCat handle in-app purchases; Google AdMob provides ads and consent tools. Online leaderboards use your Game Center or Play Games sign-in; there is no separate Quilt Bee password.</p>
-        <p>Features and permissions differ by platform, build, connection, and your choices. Test ads and sandbox purchases may still contact their providers. This page describes Quilt Bee specifically; <a href="/privacy/">Minesweeper has a separate policy</a>.</p>
+        <p><strong>The essentials:</strong> Quilt Bee saves progress on your device. When you connect a gaming account, Apple or Google can also save supported progress, coins, saved helpers, and unlocked customizations. Apple or Google processes purchases, with RevenueCat helping verify ownership. Google AdMob provides ads and privacy tools. A device-local age-group choice changes ad privacy treatment without changing the game’s features.</p>
+        <p><strong>Current v1 builds have no public leaderboards, Firebase integration, or app location lookup.</strong> Personal bests, Daily history, streaks, and monthly totals are personal save data. Information from earlier internal builds may still exist; updating the app did not erase it. See <a href="#legacy">Earlier test builds</a>.</p>
+        <p>Features depend on your platform, build, connection, and choices. Test ads and sandbox purchases can still contact their providers. <a href="/privacy/">Minesweeper has a separate policy</a>.</p>
       </div>
-
       <nav class="section-nav" aria-label="Privacy policy sections">
-        <a href="#progress">Progress &amp; cloud</a>
-        <a href="#leaderboards">Leaderboards</a>
-        <a href="#security">Online security</a>
-        <a href="#location">Location</a>
-        <a href="#purchases">Purchases</a>
-        <a href="#ads">Ads</a>
-        <a href="#choices">Your choices</a>
-        <a href="/quilt-bee/delete-data/">Request deletion</a>
-        <a href="#contact">Contact</a>
+        <a href="#progress">Progress &amp; cloud</a><a href="#age">Age group</a><a href="#purchases">Purchases</a><a href="#ads">Ads</a><a href="#legacy">Earlier test builds</a><a href="#choices">Your choices</a><a href="/quilt-bee/delete-data/">Request deletion</a><a href="#contact">Contact</a>
       </nav>
-
       <section id="progress">
-        <h2>1. Your progress and cloud saves</h2>
-        <p>Quilt Bee stores your scores, daily puzzle results, streaks, unfinished rounds, inventory, purchase transaction references, settings, and reminder preferences on your device. It also keeps account-specific progress copies and information needed to associate saves with the correct game-service profile.</p>
-        <p><strong>Apple Game Center</strong> provides your gaming identity and achievements on Apple devices; <strong>iCloud</strong> stores supported progress under the device’s main iCloud account, with separate save keys for Game Center players. The iCloud Apple Account and Game Center account can be different. Existing guest progress can also use iCloud before Game Center sign-in. <strong>Google Play Games Services and Saved Games</strong> provide gaming identity, achievements, and signed-in cloud saves on Android.</p>
-        <p>The platform cloud-save payload contains your best Endless score, best streak, and daily results: each daily score, placement counts, and whether every piece was placed. It does not include the game’s coins, helpers, cosmetic unlocks, settings, or unfinished rounds. Those remain on the device; eligible permanent purchases can separately be restored through the store. Supported progress syncs when the relevant service and account are available; offline changes can remain local until the connection resumes.</p>
-        <p>Switching game-service accounts changes the associated progress. Separate local copies may remain for previously used accounts. The app uses your player identifier and display name to identify the connected profile and keep progress separate. Account identifiers and account-derived markers are linkable information, even when represented by a hash. Platform cloud saves are separate from the Firebase leaderboard records described below. Apple and Google process cloud information under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+        <h2>1. Your progress, inventory, and cloud saves</h2>
+        <p>The game stores scores, Daily results, streaks, unfinished rounds, coins, helpers, customizations, purchase references, settings, and reminder preferences on your device. It keeps separate saves for gaming profiles used on that device, along with identifiers and records needed to keep those profiles separate and avoid granting the same purchase or reward twice.</p>
+        <p><strong>Apple Game Center</strong> provides gaming identity and achievements. <strong>iCloud</strong> stores supported saves under the device’s main iCloud account, separated by Game Center player. The iCloud Apple Account and Game Center account can be different; cross-device saves require the appropriate Game Center profile and the same iCloud account. <strong>Google Play Games Services and Saved Games</strong> provide gaming identity, achievements, and account-based saves on Android.</p>
+        <p>For connected players, supported cloud data includes:</p>
+        <ul>
+          <li>Best Endless score, best streak, and dated Daily results, including scores, placement counts, and whether all pieces were placed. Monthly totals are calculated from Daily history.</li>
+          <li>Coins, saved helper extras, and ownership of coin-unlocked palettes, accents, finishes, and clear effects.</li>
+          <li>Grant and spending records, purchase-related grant references, helper-conversion records, and account, installation, and deletion markers used to merge saves and prevent duplicate grants or restoration of deleted data.</li>
+        </ul>
+        <p>Settings, selected styles, weekly allowances, and unfinished rounds stay on the device. Eligible permanent purchases restore separately through the store. Apple and Android cloud saves do not transfer between platforms.</p>
+        <p>Guest progress and inventory stay local in current builds. An explicit guest-progress import can bring eligible local progress or a legacy guest cloud save into the connected profile. Switching gaming accounts changes the active save; separate local copies for other profiles may remain.</p>
+        <p>Offline changes are saved locally and can sync when the service returns. Cloud delivery can be delayed. In particular, iCloud accepting a write into its local cache is not confirmation that another device has received it. The game uses profile identifiers, display names, and account-derived markers; hashed identifiers can still be linkable information.</p>
+        <p>Achievements are sent to the gaming service. The current game does not submit new scores to public leaderboards. Apple and Google process their gaming and cloud services under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>, <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Game Center &amp; Privacy</a>, and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
       </section>
-
-      <section id="leaderboards">
-        <h2>2. Shared leaderboards and achievements</h2>
-        <p>Quilt Bee’s <strong>Global and Country leaderboards</strong> combine Apple and Android players. They are operated for Ticer Apps using <strong>Google Firebase Authentication, Cloud Functions, and Cloud Firestore</strong>. Game Center or Play Games sign-in supplies the gaming identity used to create or connect a Firebase user record. You do not enter a separate Quilt Bee password. Players who are not signed in do not submit leaderboard scores.</p>
-        <p>When connected, the game automatically submits eligible Endless bests and completed Daily scores. Monthly standings total the completed Daily scores for that month. We store your Firebase user identifier, gaming display name, score records, submission/update times, Apple or Android platform, and country code when available. Monthly records also contain daily scores, dates, and the number of days played. Earlier score records may remain from previous versions.</p>
-        <p><strong>Other signed-in players can see your gaming name, rank, score, platform badge, and monthly days played.</strong> Country board membership and the country code in leaderboard results can reveal the country associated with your entry. Results also contain a persistent player key so the app can identify your row. These shared boards are separate from Game Center and Play Games’ own leaderboards; their profile visibility or friends settings do not make a Quilt Bee leaderboard entry private. The game does not request your phone’s address book.</p>
-        <p>Game Center and Play Games still receive earned achievements and process gaming-service activity under their own policies. Current builds do not post new scores to their native leaderboards; older entries there may remain. See <a href="https://www.apple.com/legal/privacy/data/en/game-center/">Game Center &amp; Privacy</a>, <a href="https://policies.google.com/privacy">Google’s Privacy Policy</a>, and <a href="https://firebase.google.com/support/privacy">Firebase’s privacy information</a>.</p>
-        <p>Resetting progress or signing out does not remove published scores or the Firebase identity record. You can <a href="/quilt-bee/delete-data/">request deletion of Quilt Bee’s online records</a>. Platform achievements and any older platform leaderboard entries use Apple or Google’s separate controls.</p>
+      <section id="age">
+        <h2>2. Age group and privacy treatment</h2>
+        <p>The app asks you to choose <strong>Under 13</strong>, <strong>13–17</strong>, <strong>18 or older</strong>, or <strong>Prefer not to say</strong>. It stores that choice on this device, separately from your gaming profile and cloud saves. The app does not ask for a birth date. You can change the choice in <strong>Settings → Age group</strong>.</p>
+        <p>For everyone under 18 and anyone who prefers not to say, the app requests non-personalized ads, applies Google’s child-restricted ad treatment and a general-audience ad-content filter, and tells Google’s consent tool to use under-age treatment. It does not show Apple’s tracking-permission prompt for these groups. The app supplies the corresponding privacy-treatment flags to Google; it does not put the age-group choice in your game cloud save.</p>
+        <p>Adults use the normal consent pathway. On Apple devices, the app can explain and request tracking permission at the first game-over privacy step. Apple’s permission and Google’s consent choices are separate. Changing age treatment discards ads already held by the game so they cannot be shown under the previous treatment.</p>
+        <p>Age treatment does not change puzzle access, earned-coin features, purchases, or supported saves. Store approval, account restrictions, and parental controls still apply. Restricted or non-personalized ads are not a promise of zero provider data processing; see the advertising section below.</p>
       </section>
-
-      <section id="security">
-        <h2>3. Online security and service information</h2>
-        <p>We use <strong>Firebase App Check</strong> with Apple App Attest or DeviceCheck, or Google Play Integrity, to help check that online requests come from the expected app. These services process app/device integrity information, attestation material, and security tokens. App Check can start when the app launches, including before game-service sign-in. Other enabled SDKs can also contact their providers before you play or purchase.</p>
-        <p>Firebase and Google Cloud process connection and service information, such as IP addresses, app or device information, request times, authentication activity, and errors, to operate and protect the service. Our leaderboard service keeps user-linked request counters to limit misuse. Its application code does not deliberately write names, scores, request bodies, or authentication tokens to logs; hosting and provider-generated operational or security logs can still exist.</p>
-        <p>Online leaderboard requests require authentication and app verification and pass through a server that checks submissions and limits requests. Apps cannot directly read or write the leaderboard database. These safeguards reduce risk; they are not a guarantee against all cheating, unauthorized access, or service disruption. See <a href="https://firebase.google.com/support/privacy">Firebase’s privacy and security information</a>.</p>
-      </section>
-
-      <section id="location">
-        <h2>4. Optional location for Country rankings</h2>
-        <p>If you enable Country leaderboards, Quilt Bee asks for location access while you use the app. Android requests approximate location only. On iOS, the app requests reduced accuracy and a location estimate sufficient to determine a country; the location returned is controlled by the operating system and your permissions. The game does not request background location access.</p>
-        <p>The app passes the location estimate to the operating system’s geocoding service to determine a country or territory code. That lookup may contact Apple, Google, or the device’s geocoding provider; it is not guaranteed to stay on the device. Quilt Bee does not save or log the raw coordinates or include them in leaderboard requests. It retains the resulting country code and location preference, and sends the country code with eligible leaderboard records.</p>
-        <p>The code places your entry on a Country board. Traveling can change the country attached to later submissions; previously submitted records can remain associated with an earlier country. The app does not send these location coordinates to its purchase or advertising integration. Ad services may independently estimate general location from an IP address.</p>
-        <p>You can decline or revoke location permission and continue playing and using Global rankings. Revoking permission stops new location lookups; it does not erase the country in previously submitted records or automatically clear the stored country preference. Manage permission in your device settings. Apple explains its location services <a href="https://www.apple.com/legal/privacy/data/en/location-services/">here</a>; Android’s <a href="https://developer.android.com/reference/android/location/Geocoder">geocoding documentation</a> describes possible network use.</p>
-      </section>
-
       <section id="purchases">
-        <h2>5. Purchases and purchase support</h2>
-        <p><strong>Apple’s App Store</strong> or <strong>Google Play</strong> processes your payment. <strong>RevenueCat</strong> helps verify transactions, restore purchases, and determine which products you own. This involves purchase receipts or tokens, product and transaction information, purchase history, entitlement status, and an automatically generated customer identifier. Technical information such as device type, operating system, app version, and service activity may also be processed.</p>
-        <p>The game uses RevenueCat’s generated identifier instead of supplying your Game Center or Play Games identity as a customer login. The app does not ask for or send your name, email address, or payment-card details to RevenueCat. The generated identifier can still be linked to purchase records and should not be treated as a promise of anonymous processing.</p>
-        <p>Purchase information supports validation, fraud prevention, app functionality, and RevenueCat dashboard analytics. We can use purchase/customer records to investigate purchase problems and manage access. The SDK may contact RevenueCat even when you do not complete a purchase. We do not receive your full payment-card details.</p>
-        <p>Deleting game progress does not delete purchase records. For requests concerning purchase-support data processed on our behalf, contact us so we can investigate and, where applicable, instruct our provider. Stores may retain billing records for their own legal and operational purposes. Learn more from the <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a>, <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>, and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+        <h2>3. Purchases and purchase support</h2>
+        <p><strong>Apple’s App Store</strong> or <strong>Google Play</strong> processes payment. <strong>RevenueCat</strong> helps verify transactions, restore purchases, and determine product ownership. This involves receipts or purchase tokens, product and transaction details, purchase history, entitlement status, and a generated customer identifier. Device, operating-system, app-version, and service information may also be processed.</p>
+        <p>The game uses RevenueCat’s generated identifier rather than supplying your Game Center or Play Games identity as a RevenueCat login. It does not ask for or send your name, email address, or payment-card details to RevenueCat. A generated identifier can still be associated with purchase records; it is not a guarantee of anonymous processing.</p>
+        <p>Purchase records support verification, fraud prevention, app functionality, purchase support, and RevenueCat dashboard analytics. The SDK can contact RevenueCat without a completed purchase. We do not receive your full payment-card details. The app and its cloud wallet retain grant and transaction references to prevent duplicate rewards, including on restore.</p>
+        <p>Deleting progress does not delete store or RevenueCat purchase records. Contact us about purchase-support information processed on our behalf. Stores and providers may retain records for ownership, billing, security, or legal purposes. See the <a href="https://www.revenuecat.com/privacy">RevenueCat Privacy Policy</a> and the Apple and Google privacy policies linked above.</p>
       </section>
-
       <section id="ads">
-        <h2>6. Advertising and privacy choices</h2>
-        <p>Quilt Bee uses <strong>Google AdMob</strong> for between-round and optional rewarded ads, and Google’s <strong>User Messaging Platform</strong> for applicable consent and privacy choices. Depending on the platform, settings, and ad request, these services and advertising partners may process:</p>
+        <h2>4. Advertising and consent</h2>
+        <p>Quilt Bee uses <strong>Google AdMob</strong> for between-round and optional rewarded ads, and Google’s <strong>User Messaging Platform</strong> for applicable consent and privacy choices. Depending on age treatment, permissions, and the request, advertising services can process:</p>
         <ul>
           <li>IP address and general location estimated from it.</li>
-          <li>Device, app, account, or advertising identifiers, including Android advertising/app set IDs or Apple’s advertising identifier when permitted.</li>
-          <li>App and ad interactions, such as launches, taps, views, and ads shown.</li>
-          <li>Crash, diagnostic, and performance information, and information needed to record privacy choices.</li>
+          <li>Device, app, account, or advertising identifiers, where permitted.</li>
+          <li>App and ad interactions, such as launches, views, and taps.</li>
+          <li>Diagnostic and performance information and records of privacy choices.</li>
         </ul>
-        <p>This information supports advertising, measurement, analytics, and fraud prevention. Quilt Bee does not pass its cloud-save payload, game-service identity, or raw location coordinates to the ad integration. Applicable consent steps must permit ad requests before the game requests an ad. On iOS, Apple’s tracking permission and Google’s consent choices are separate controls.</p>
-        <p>Depending on your choices and applicable requirements, ads may be personalized, non-personalized, limited, or unavailable. Declining tracking or using test/non-personalized ads does not stop every data transfer. Available privacy messages explain advertising partners and choices. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps</a>, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, and Google’s <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Android</a> and <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">iOS</a> ad-data disclosures.</p>
-        <p>We do not sell your game-save data or support messages. Advertising activity may be considered sharing or targeted advertising under some laws. You can use the available ad privacy controls described below.</p>
+        <p>This supports advertising, measurement, analytics, and fraud prevention. Quilt Bee does not pass its cloud-save contents or gaming-profile identity to the ad integration. It does not request location permission or perform location lookups in current v1 builds; advertising providers can still estimate general location from connection information.</p>
+        <p>The game applies its age treatment and required privacy checks before requesting an ad. Ads may be personalized, non-personalized, limited, or unavailable depending on permissions and consent. Denying tracking or using a restricted or test ad does not stop every provider connection or data transfer. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps</a>, the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, and Google’s <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Android</a> and <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">iOS</a> ad-data disclosures.</p>
+        <p>No Ads or Premium removes between-round ads. Optional rewarded ads, privacy controls, and some provider processing remain available. Other purchases do not remove between-round ads. Available privacy messages describe advertising partners and your choices.</p>
+        <p>We do not sell your game-save data or support messages. Advertising activity may be considered sharing or targeted advertising under some laws. Use the available privacy controls described below.</p>
       </section>
-
       <section id="reminders">
-        <h2>7. Daily reminders</h2>
-        <p>Daily reminders are local notifications scheduled on your device using your chosen time and daily completion information. They do not require a Ticer Apps server to send the reminder. Your operating system controls notification permission and delivery. You can change the time, turn reminders off, or try a sample notification in the game’s Settings, and manage notifications in your device settings.</p>
+        <h2>5. Daily reminders</h2>
+        <p>Daily reminders are local notifications scheduled using your chosen time and Daily completion information. A Ticer Apps server does not send them. You can change the time or turn reminders off in the game, and manage notification permission in device settings. The operating system controls delivery.</p>
       </section>
-
+      <section id="legacy">
+        <h2>6. Earlier test builds and retained online records</h2>
+        <p>Earlier internal builds included public rankings powered by Firebase Authentication, Cloud Functions, and Cloud Firestore, plus optional location lookup for country rankings. Those builds could submit a gaming identity, Firebase user identifier, display name, platform, scores, dates, monthly or weekly totals, days played, and a country code. Other players could view leaderboard entries. Raw location coordinates were not included in the game’s leaderboard records.</p>
+        <p>Those builds also used Firebase App Check with Apple App Attest or DeviceCheck, or Google Play Integrity, and service protections that processed integrity, connection, authentication, and request information. They could contact those services while running. Current v1 builds do not contain that Firebase integration, read or submit those rankings, or look up location.</p>
+        <p><strong>Removing these features did not erase records already hosted online.</strong> Old test builds may still access the earlier service while it is available. Old Game Center or Play Games leaderboard entries may also remain with their platform provider. Current in-app <strong>Delete player data</strong> does not erase Firebase identities or old public scores.</p>
+        <p>Use our <a href="/quilt-bee/delete-data/">data-deletion request page</a> to request removal of earlier Quilt Bee online records. Please identify the platform and nickname used; we may need further information to verify ownership. Platform achievements and native leaderboard records use Apple or Google’s own controls. See <a href="https://firebase.google.com/support/privacy">Firebase’s privacy information</a>.</p>
+      </section>
       <section id="support">
-        <h2>8. Support, diagnostics, and this website</h2>
-        <p>If you email us, we receive your email address, message, and any details or attachments you choose to send. We use them to respond to support or privacy requests. Gmail processes those messages as our email provider. Please avoid sending passwords or payment-card details.</p>
-        <p>Quilt Bee does not include Firebase Analytics or Crashlytics or send a separate stream of gameplay analytics events to a Ticer Apps analytics service. Development builds can log events locally for debugging. This does not exclude the online security records described above or the store, purchase, advertising, and game-service providers’ own analytics and diagnostics.</p>
-        <p>This website is hosted by <strong>GitHub Pages</strong>. We have added no website analytics, tracking pixels, ads, third-party fonts, or JavaScript. GitHub can process connection information, including IP addresses, as explained in its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>. External links lead to services with their own practices.</p>
+        <h2>7. Support, diagnostics, and this website</h2>
+        <p>If you email us, we receive your address, message, and attachments and use them to respond. Gmail processes messages as our email provider. Please do not send passwords, sign-in codes, or payment-card details.</p>
+        <p>Current v1 builds have no Firebase SDKs, Firebase Analytics, or Crashlytics and send no separate gameplay analytics stream to Ticer Apps. Development builds can log locally for debugging. This does not exclude store, purchase, advertising, and gaming-service providers’ own diagnostics or retained earlier-service records.</p>
+        <p><strong>GitHub Pages</strong> hosts this website. We have added no website analytics, tracking pixels, ads, third-party fonts, or JavaScript. GitHub may process connection information, including IP addresses, under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy Statement</a>. External sites have their own practices.</p>
       </section>
-
       <section id="choices">
-        <h2>9. Your choices and deletion requests</h2>
+        <h2>8. Your choices and deletion</h2>
         <ul>
-          <li><strong>Ad privacy:</strong> use <strong>Settings → Privacy choices</strong> when the option is available. You can also manage advertising identifiers through Android settings and Apple tracking permission through iOS Settings → Privacy &amp; Security → Tracking. Declining applicable permissions does not prevent ordinary gameplay.</li>
-          <li><strong>Optional rewarded ads:</strong> these are your choice. No Ads or Premium removes between-round ads; optional rewarded ads and some SDK/consent processing can remain.</li>
-          <li><strong>Gaming profiles:</strong> manage Game Center or Play Games accounts through the platform’s settings. Signing out does not itself delete cloud progress, the Firebase user record, or previously submitted scores. Platform profile privacy settings do not control the visibility of Quilt Bee’s shared leaderboard entries.</li>
-          <li><strong>Location and reminders:</strong> manage the in-game feature settings and the corresponding permissions in your device settings. Location is not needed for ordinary gameplay or Global rankings.</li>
-          <li><strong>Restore purchases:</strong> use the game’s <strong>Restore purchases</strong> option with the store account that made the purchase to restore eligible permanent ownership. A restore does not regrant coin or helper bundles. Purchase access and game progress are handled separately.</li>
-          <li><strong>Reset progress:</strong> <strong>Settings → Reset current player data</strong> resets this player’s local progress and this device’s settings and inventory, and attempts to clear the current platform cloud save. The confirmation explains the reset. It does not delete other players’ local account copies, the Firebase user record, public leaderboard scores, achievements, store/provider purchase records, advertising identifiers, device permissions, or every saved geographic preference. Eligible permanent purchases can be restored; coin and helper bundles are not regranted. Cloud changes require the relevant service to be available, and progress still held by another device can sync back. A reset is not a request to erase every online record.</li>
-          <li><strong>Remove local app storage:</strong> use your device’s delete-app or clear-storage controls. Offloading an iOS app retains its data and differs from deleting it. Local removal does not erase cloud saves, store records, or external backups; reconnecting can restore supported cloud progress.</li>
-          <li><strong>Request access, correction, or deletion:</strong> see our <a href="/quilt-bee/delete-data/">Quilt Bee data-deletion request page</a> or email <a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20privacy%20request">ticerapps@gmail.com</a>. We will address information we control or that providers process on our behalf, and help identify controls for data Apple, Google, or other providers hold independently. We may need reasonable information to verify your request. Do not send your password.</li>
+          <li><strong>Age group:</strong> change the device-local choice in Settings. The restricted treatment applies when the choice is under 18 or “Prefer not to say.”</li>
+          <li><strong>Ad privacy:</strong> open <strong>Settings → Privacy choices</strong> when available. Device settings also provide advertising-ID and Apple tracking controls. Declining applicable permissions does not prevent ordinary gameplay.</li>
+          <li><strong>Gaming profiles:</strong> use platform account controls to change or disconnect Game Center or Play Games. Disconnecting alone does not delete a saved profile, achievements, purchase records, or earlier online records.</li>
+          <li><strong>Reminders:</strong> turn them off or change their time in the game; manage permission in device settings.</li>
+          <li><strong>Restore purchases:</strong> use the store account that purchased eligible permanent products. Restore does not regrant consumable packs. Purchase ownership and gaming saves are separate.</li>
+          <li><strong>Delete player data:</strong> in current v1 builds, <strong>Settings → Delete player data</strong> resets the selected player’s local progress and wallet and records the reset in their supported platform cloud saves. Coins, saved helpers, and coin-unlocked customizations are included; gameplay and reminder settings reset; your age-group choice is retained. Other players’ saves, gaming accounts, achievements, and permanent purchase ownership remain. The app keeps cloud sync disconnected until you reconnect; follow any retry message if deletion is incomplete. Cloud delivery can be delayed. On iCloud, older per-device wallet copies may remain until replaced or removed; current builds ignore those older copies after receiving the deletion marker. This action does <strong>not</strong> delete earlier Firebase accounts or leaderboard entries, provider purchase or ad records, permissions, or independent backups.</li>
+          <li><strong>Guests:</strong> deletion clears local guest data and a legacy guest cloud save if available. It does not erase a signed-in player’s save. Sign into the relevant profile to delete its supported saved data.</li>
+          <li><strong>Remove app storage:</strong> deleting the app or clearing its data removes local storage according to your operating system. Offloading an iOS app retains data. Cloud and provider records can remain, and reconnecting may restore supported saves. Recovery copies of damaged saves or separate device backups may also remain.</li>
+          <li><strong>Access, correction, or deletion requests:</strong> visit the <a href="/quilt-bee/delete-data/">request page</a> or email <a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20privacy%20request">ticerapps@gmail.com</a>. We address information we control or that providers process on our behalf and help identify controls for independently held provider data. We may ask for reasonable information to verify a request, never your password.</li>
         </ul>
       </section>
-
       <section id="retention">
-        <h2>10. Retention, security, and your rights</h2>
-        <p>Local progress, account copies, and preferences remain until replaced or removed. Firebase identity and leaderboard records have no automatic expiry in Quilt Bee; they remain until removed through a verified request or service administration. Per-user request counters have a two-day expiry setting; database cleanup is asynchronous. Platform cloud saves and provider-generated logs or security records follow the relevant service’s retention and deletion processes. Support and purchase-related records are kept as needed to provide support, maintain purchased access, prevent fraud, resolve disputes, and satisfy applicable obligations. Providers can have separate retention duties, and a reset is not a promise that every backup or provider record is immediately erased.</p>
-        <p>We use platform storage protections and the security measures of the services involved. This website is served over HTTPS. No storage or transmission method can be guaranteed completely secure. Providers may process information in countries other than yours under their policies and applicable safeguards.</p>
-        <p>Depending on where you live, you may have rights to access, correct, delete, or receive a copy of information; object to or restrict processing; withdraw consent; opt out of applicable sharing or targeted advertising; or complain to a regulator or appeal a decision. We will handle requests within our control as required by applicable law without penalizing you for exercising your rights.</p>
-        <p>Where a legal basis is required, processing may rely on providing requested features, consent where required, legitimate interests such as support and service security, or legal obligations. Withdrawing consent does not affect processing that was lawful before withdrawal.</p>
+        <h2>9. Retention, security, and your rights</h2>
+        <p>Local and cloud progress, inventory records, account copies, and preferences remain until replaced or removed through the relevant controls. Purchase-grant and deletion markers help prevent duplicate rewards and deleted saves from returning. Platform cloud services, independent backups, and provider logs follow their own retention and deletion processes. Support and purchase-related records may be kept for support, ownership, fraud prevention, disputes, and applicable obligations.</p>
+        <p>Earlier Firebase identity and leaderboard records have no automatic expiry in the game’s service and remain until removed through a verified request or service administration. The earlier deletion system retains limited, linkable security markers: a keyed hash derived from the platform gaming identity, deletion version and state, and hashes of erased Firebase identifiers. These have no automatic expiry and do not contain gaming names or scores. An unfinished cleanup can retain the user identifier and request reference needed to complete it. Abuse-prevention counters have a two-day expiry setting with asynchronous cleanup. Provider-generated logs and backups are separate. Removing the current app integration did not remove these records.</p>
+        <p>We use platform storage protections and the safeguards of the services involved. This website uses HTTPS. No storage or transmission method is completely secure, and deletion is not a promise of immediate erasure from every provider or backup. Providers may process information outside your country under their policies and applicable safeguards.</p>
+        <p>Depending on where you live, you may have rights to access, correct, delete, or obtain information; restrict or object to processing; withdraw consent; opt out of applicable sharing or targeted advertising; or complain to a regulator or appeal a decision. We handle requests within our control as required by applicable law without penalizing you for exercising your rights.</p>
+        <p>Where a legal basis is required, processing may rely on providing requested features, consent where required, legitimate interests such as support and service security, or legal obligations. Withdrawing consent does not affect earlier lawful processing.</p>
       </section>
-
       <section id="children">
-        <h2>11. Children and policy updates</h2>
-        <p>If you are a parent or guardian concerned about a child’s information, please contact us. We will investigate and address information within our control, including deletion where required.</p>
-        <p>We will update this policy and its date when practices change, with additional notice or consent where required. A feature described here may not be available in every test or store build.</p>
+        <h2>10. Parents, guardians, and updates</h2>
+        <p>If you are a parent or guardian with a concern about a child’s information, contact us. We will investigate and address information within our control, including deletion where required. Device and store parental controls can restrict purchases and connected accounts.</p>
+        <p>We will update this policy and its date when practices change, with additional notice or consent where required. Earlier internal builds can behave differently, as described above.</p>
       </section>
-
       <section class="contact" id="contact">
-        <h2>12. Contact Ticer Apps</h2>
+        <h2>11. Contact Ticer Apps</h2>
         <p>For Quilt Bee support or privacy requests:<br><a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a></p>
       </section>
     </main>
-    <footer>
-      <span>© 2026 Ticer Apps</span>
-      <a href="/quilt-bee/">Back to Quilt Bee</a>
-    </footer>
+    <footer><span>© 2026 Ticer Apps</span><a href="/quilt-bee/">Back to Quilt Bee</a></footer>
   </div>
 </body>
 </html>
