@@ -15,8 +15,9 @@ third-party fonts, or trackers are added by this site.
   store/provider accounts; the email link is not an automatic deletion form.
 - `/privacy/`: existing Minesweeper: Strait of Hormuz privacy policy. Keep this
   published URL stable for existing app/store links.
+- `/gem-sweeper/`: Gem Sweeper product information and support; public release pending.
 - `/gem-sweeper/privacy/`: Gem Sweeper-specific privacy policy, including platform progress,
-  achievements, delayed banners, interstitials and optional rewarded gems.
+  achievements, delayed banners, interstitials, optional rewarded gems, purchases and RevenueCat.
 - `/app-ads.txt`: authorized advertising seller declaration; retain the existing
   Google publisher ID `pub-9806107692884322`.
 
