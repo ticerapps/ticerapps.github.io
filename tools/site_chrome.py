@@ -24,7 +24,9 @@ GROUPS = [
         ("/quilt-bee/", "quilt-bee", "Quilt Bee: Block Puzzle", "Android · iOS soon", False),
     ]),
     ("Tools", None, [
-        ("/apportionment-calculator/", "apportionment", "Apportionment Calculator", "iOS · Mac · Android", False),
+        ("/apportionment-calculator/", "apportionment", "Apportionment Calculator", "iPhone · iPad · Mac", False),
+        ("/apportionment-calculator/#versions", "apportionment", "Apportionment Calculator Lite", "Android · Free", False),
+        ("/apportionment-calculator/#versions", "apportionment", "Apportionment Calculator Pro", "Android · $4.99", False),
     ]),
 ]
 
