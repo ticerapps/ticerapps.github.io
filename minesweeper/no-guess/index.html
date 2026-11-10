@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No-Guess Minesweeper: What It Means &amp; How It Works · Ticerapps</title>
+  <meta name="description" content="A no-guess Minesweeper board can be solved by logic alone. How a solver checks each board, why mines are capped near 21%, and what to do when you feel stuck.">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#0C1210">
+  <link rel="canonical" href="https://ticerapps.com/minesweeper/no-guess/">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css?v=3">
+  <link rel="stylesheet" href="/assets/minesweeper/guides.css">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ticerapps">
+  <meta property="og:title" content="No-guess Minesweeper">
+  <meta property="og:description" content="A no-guess Minesweeper board can be solved by logic alone. How a solver checks each board, why mines are capped near 21%, and what to do when you feel stuck.">
+  <meta property="og:url" content="https://ticerapps.com/minesweeper/no-guess/">
+  <meta property="og:image" content="https://ticerapps.com/assets/apps/minesweeper/icon.webp">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "No-guess Minesweeper",
+      "description": "What a no-guess Minesweeper board is, how a solver checks it, and what to do when you feel stuck.",
+      "url": "https://ticerapps.com/minesweeper/no-guess/",
+      "datePublished": "2026-10-12",
+      "dateModified": "2026-11-10",
+      "author": {
+        "@type": "Organization",
+        "name": "Ticerapps",
+        "url": "https://ticerapps.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ticerapps",
+        "url": "https://ticerapps.com/"
+      },
+      "image": "https://ticerapps.com/assets/apps/minesweeper/icon.webp"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ticerapps",
+          "item": "https://ticerapps.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Minesweeper",
+          "item": "https://ticerapps.com/minesweeper/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "No-guess Minesweeper",
+          "item": "https://ticerapps.com/minesweeper/no-guess/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><img class="logo" src="/assets/brand/ticerapps-logo.webp?v=2" alt="" width="32" height="32">Ticerapps</a>
+      <nav class="nav" aria-label="Main">
+        <!-- apps-menu:start --><details class="apps-menu"><summary>Apps <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="apps-panel"><div class="apps-group"><a class="group-label" href="/minesweeper/">Minesweeper <span>Games &amp; guides →</span></a><a class="apps-item" href="/minesweeper-strait-of-hormuz/"><img src="/assets/apps/minesweeper/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Minesweeper: Strait of Hormuz</strong><small>iOS · Android · browser</small></span></a><a class="apps-item" href="/gem-sweeper/"><img src="/assets/apps/gem-sweeper/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Gem Sweeper</strong><small>iOS · Android</small></span><span class="pill pill-soon">SOON</span></a></div><div class="apps-group"><p class="group-label" style="margin:0">Block puzzle</p><a class="apps-item" href="/quilt-bee/"><img src="/assets/apps/quilt-bee/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Quilt Bee: Block Puzzle</strong><small>Android · iOS soon</small></span></a></div><div class="apps-group"><p class="group-label" style="margin:0">Tools</p><a class="apps-item" href="/apportionment-calculator/"><img src="/assets/apps/apportionment/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Apportionment Calculator</strong><small>iOS · Mac · Android</small></span></a></div><a class="apps-all" href="/#apps">All apps →</a></div></details><!-- apps-menu:end -->
+        <a href="/#guides">Guides</a>
+        <a href="/support/">Privacy</a>
+        <a href="/support/#help">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap guide ms-guide">
+    <p class="crumbs"><a href="/">Ticerapps</a> <span aria-hidden="true">/</span> <a href="/minesweeper/">Minesweeper</a> <span aria-hidden="true">/</span> No-guess</p>
+    <p class="eyebrow">Explainer</p>
+    <h1>No-guess Minesweeper</h1>
+    <p class="lead">A board that has been checked for a path you can solve with logic alone, from your first tap to the last safe tile.</p>
+
+    <div class="prose">
+      <h2 id="meaning">What does no-guess mean?</h2>
+      <p>An ordinary random board can force a 50/50: two tiles, one mine, and no clue anywhere that tells them apart. A <strong>no-guess</strong> board has a route from its opening to every safe tile using deductions only. You can still lose to a wrong move or a misplaced flag, but never to a coin flip the board forced on you.</p>
+
+      <h2 id="how">How a no-guess board is made</h2>
+      <ol>
+        <li><strong>You choose your opening.</strong> The game prepares the mine layout around that tap, keeping it and its neighbours clear.</li>
+        <li><strong>A solver checks it.</strong> It plays the board the way a careful player would, using only revealed clues and deductions, and tests whether every safe tile can be cleared.</li>
+        <li><strong>You play the checked board.</strong> If the solver gets stuck, that layout is not used. What you get is a board with no forced guess.</li>
+      </ol>
+
+      <h2 id="not">What no-guess does not mean</h2>
+      <p>It does not mean every tile can be decided right away. Sometimes the clue you need is on another part of the board, and you have to open more of it first. It does not protect you from your own flags either: a wrong flag makes a later chord open a mine.</p>
+
+      <h2 id="stuck">Stuck does not always mean guessing</h2>
+      <p>When a no-guess board seems stuck, the answer is there; it is usually one of these:</p>
+      <ul>
+        <li><strong>Subtract proven flags</strong> from every number they touch. A 2–3–2 above a flag is really a 1–2–1. <a href="/minesweeper/strategy/#reduction">See the worked example</a>.</li>
+        <li><strong>Compare overlapping numbers.</strong> Two clues that share most of their neighbours often settle the tiles they don’t share. <a href="/minesweeper/strategy/#one-one">1–1</a> and <a href="/minesweeper/strategy/#one-two">1–2</a> are the basic cases.</li>
+        <li><strong>Count the whole board</strong> near the end. If the mines left equal the mines one clue still needs, every other hidden tile is safe. <a href="/minesweeper/strategy/#counting">Endgame counting</a>.</li>
+        <li><strong>Look elsewhere.</strong> A different edge of the opening may be easier to push forward.</li>
+      </ul>
+
+      <h2 id="density">Why no-guess boards cap the mines</h2>
+      <p>The denser a board, the more often a random layout forces a guess, and the longer a generator has to search for one that doesn’t. So no-guess games cap how dense a board can get. That cap is a design choice that balances difficulty against waiting time, not a mathematical limit on Minesweeper.</p>
+
+      <h2 id="our-games">No-guess in our games</h2>
+      <div class="table-box"><table>
+        <thead><tr><th scope="col">Game</th><th scope="col">No-guess boards</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/gem-sweeper/">Gem Sweeper</a></td><td>On by default for every size and difficulty. It includes a safe first tap and a safe opening zone, and you can switch it off in Settings.</td></tr>
+          <tr><td><a href="https://minesweeperstraitofhormuz.com/">Strait of Hormuz, in the browser</a></td><td>All four strait boards start with no-guess on. The hardest level, Veteran, caps at 21% mines, rounded down: 24 mines on Small Hands and 187 on Hormuz Closed.</td></tr>
+          <tr><td><a href="/minesweeper-strait-of-hormuz/">Strait of Hormuz app</a></td><td>Grid rules you can configure, plus 44 hand-built campaign puzzles that are designed to be solved by logic.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <section class="band wide-text" style="margin-top: 72px" aria-labelledby="play-title">
+      <div class="stack" style="gap: 16px">
+        <p class="eyebrow">Practise on a real board</p>
+        <h2 id="play-title">Four free boards, no download.</h2>
+        <p>Minesweeper: Strait of Hormuz runs in any browser. The full games are free on iPhone, iPad and Android.</p>
+        <div class="actions"><a class="btn btn-gold" href="https://minesweeperstraitofhormuz.com/#play">Play in your browser <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a><a class="btn btn-ghost" href="/minesweeper/#games">Our Minesweeper games</a></div>
+      </div>
+      <div class="shots-pair">
+        <img src="/assets/apps/minesweeper/shot-2.webp" alt="A Minesweeper board mid-game" width="540" height="960" loading="lazy">
+        <img src="/assets/apps/minesweeper/shot-3.webp" alt="A hand-built Minesweeper puzzle" width="540" height="960" loading="lazy">
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <h2 class="section-title" id="related-title">Keep reading</h2>
+      <div class="grid-3">
+        <a class="link-card" href="/minesweeper/how-to-play/"><span class="topic">Beginner</span><strong>How to play Minesweeper</strong><span>The rules in three lines, controls, flags and your first move.</span></a>
+        <a class="link-card" href="/minesweeper/strategy/"><span class="topic">Strategy</span><strong>Minesweeper patterns: 12 visual examples</strong><span>1–1, 1–2–1, 1–2–2–1, corners, reductions and counting, with practice boards.</span></a>
+        <a class="link-card" href="/minesweeper/"><span class="topic">Games</span><strong>Ticerapps Minesweeper games</strong><span>Minesweeper: Strait of Hormuz and Gem Sweeper.</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Ticerapps</span>
+      <nav aria-label="Footer">
+        <a href="/support/">Privacy policies</a>
+        <a href="/support/#help">Support</a>
+        <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

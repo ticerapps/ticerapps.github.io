@@ -11,7 +11,7 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/site.css?v=2">
+  <link rel="stylesheet" href="/assets/site.css?v=3">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ticerapps">
   <meta property="og:title" content="Ticerapps · Puzzle games and clever tools">
@@ -53,7 +53,7 @@
     <div class="wrap">
       <a class="brand" href="/"><img class="logo" src="/assets/brand/ticerapps-logo.webp?v=2" alt="" width="32" height="32">Ticerapps</a>
       <nav class="nav" aria-label="Main">
-        <a href="#apps">Apps</a>
+        <!-- apps-menu:start --><details class="apps-menu"><summary>Apps <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="apps-panel"><div class="apps-group"><a class="group-label" href="/minesweeper/">Minesweeper <span>Games &amp; guides →</span></a><a class="apps-item" href="/minesweeper-strait-of-hormuz/"><img src="/assets/apps/minesweeper/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Minesweeper: Strait of Hormuz</strong><small>iOS · Android · browser</small></span></a><a class="apps-item" href="/gem-sweeper/"><img src="/assets/apps/gem-sweeper/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Gem Sweeper</strong><small>iOS · Android</small></span><span class="pill pill-soon">SOON</span></a></div><div class="apps-group"><p class="group-label" style="margin:0">Block puzzle</p><a class="apps-item" href="/quilt-bee/"><img src="/assets/apps/quilt-bee/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Quilt Bee: Block Puzzle</strong><small>Android · iOS soon</small></span></a></div><div class="apps-group"><p class="group-label" style="margin:0">Tools</p><a class="apps-item" href="/apportionment-calculator/"><img src="/assets/apps/apportionment/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Apportionment Calculator</strong><small>iOS · Mac · Android</small></span></a></div><a class="apps-all" href="/#apps">All apps →</a></div></details><!-- apps-menu:end -->
         <a href="#guides">Guides</a>
         <a href="/support/">Privacy</a>
         <a href="/support/#help">Support</a>
@@ -163,17 +163,17 @@
     </section>
 
     <section class="wrap section" id="guides" aria-labelledby="guides-title">
-      <h2 class="section-title" id="guides-title">Guides</h2>
+      <div class="section-head"><h2 class="section-title" id="guides-title">Guides</h2><p><a href="/minesweeper/#guides">All Minesweeper guides →</a></p></div>
       <div class="grid-3">
-        <a class="link-card" href="https://minesweeperstraitofhormuz.com/strategy/">
+        <a class="link-card" href="/minesweeper/strategy/">
           <span class="topic">Minesweeper</span>
           <strong>Strategy and patterns</strong>
-          <span>Twelve visual patterns, chording, and a worked example.</span>
+          <span>Twelve visual patterns, chording practice, and a worked example.</span>
         </a>
-        <a class="link-card" href="https://minesweeperstraitofhormuz.com/no-guess-minesweeper/">
+        <a class="link-card" href="/minesweeper/how-to-play/">
           <span class="topic">Minesweeper</span>
-          <strong>No-guess minesweeper</strong>
-          <span>How the boards are checked, and what no-guess means.</span>
+          <strong>How to play Minesweeper</strong>
+          <span>The rules in three lines, controls, flags and your first move.</span>
         </a>
         <a class="link-card" href="/apportionment-calculator/#methods">
           <span class="topic">Apportionment</span>

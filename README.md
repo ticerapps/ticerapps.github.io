@@ -2,9 +2,10 @@
 
 Ticerapps' static GitHub Pages site, served at https://ticerapps.com (custom domain set
 on 2026-11-10; old `ticerapps.github.io/...` links redirect to the same path). No build
-step, analytics, cookies, third-party fonts, or trackers are added by this site. The only
-JavaScript is `assets/get.js` on the `/get/` download links below; it reads the device type and
-the link's campaign tags and stores nothing.
+step, analytics, cookies, third-party fonts, or trackers are added by this site. Two scripts
+exist: `assets/get.js` on the `/get/` download links below (reads the device type and the link's
+campaign tags, stores nothing) and `assets/minesweeper/guides.js` on the pattern guide (the
+practice boards; no network calls or storage). The header's Apps menu is HTML and CSS only.
 
 ## Pages
 
@@ -20,6 +21,14 @@ the link's campaign tags and stores nothing.
   `ticerapps/apportionment-calculator` (index.html is the app page and support URL,
   privacy.html the policy). It uses this repo's `/assets/` and `/favicon.svg`. Never
   add an `apportionment-calculator/` folder here: it would collide with that site.
+- `/minesweeper/`: the Minesweeper hub, added 2026-11-10: both Minesweeper games, the guides,
+  the pattern library and an FAQ (FAQPage structured data). The guides live under it:
+  `/minesweeper/how-to-play/` (general rules), `/minesweeper/strategy/` (12 patterns and the
+  practice lessons) and `/minesweeper/no-guess/`. The pattern and no-guess guides moved here from
+  minesweeperstraitofhormuz.com, whose old URLs now redirect; that site keeps the browser game,
+  the strait boards and a game-specific How to play page (controls, HUD, board sizes).
+  Block puzzle and Tools have no hub yet: give each one only when it has a guide of its own,
+  then make its Apps-menu heading a link in `tools/site_chrome.py`.
 - `/gem-sweeper/`: Gem Sweeper page and support, marked coming soon. When it launches,
   swap the two dashed "Coming soon" store blocks for the official badges.
 - `/support/`: privacy and support hub listing every app's policy.
@@ -63,6 +72,18 @@ YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
 - When an app reaches a store, fill its `data-ios` / `data-android` attribute and swap the
   matching "Coming soon" block for the badge with `data-store="ios"` or `data-store="android"`.
 - The pages are `noindex` and left out of the sitemap so they don't compete with the app pages.
+
+## Tools
+
+- `python3 tools/site_chrome.py ~/Desktop/dev/apportionment-calculator` writes the Apps menu into
+  the header of every page in both repos and sets the `site.css?v=N` version (`CSS_VERSION`). Edit
+  the menu's apps and categories there, never by hand in a page.
+- `python3 tools/minesweeper/build_strategy.py` regenerates the pattern guide between its
+  `patterns` markers. `patterns.py` holds the 12 examples; each one is proved against every
+  possible mine placement before the page is written. `practice.py` holds the two lessons.
+- `python3 tools/check_site.py ~/Desktop/dev/apportionment-calculator` checks every page: one h1,
+  canonical URLs, links, #anchors, assets, JSON-LD, the Apps menu, the sitemap and the pattern
+  proofs. Run it before every push.
 
 ## Assets
 

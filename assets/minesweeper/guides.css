@@ -1,0 +1,108 @@
+/* Minesweeper guides: tile diagrams, the pattern library and the practice lessons.
+   Loaded only on /minesweeper/ guide pages. Ported from minesweeperstraitofhormuz.com (2026-11-10). */
+.ms-guide { --tile-font: var(--display); --edge: var(--line); }
+
+/* Small rule diagrams (how to play) */
+.diagram-row { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 8px 28px; align-items: start; margin: 24px 0; }
+.diagram-row p { margin: 0; }
+.tiles-mini { display: inline-grid; grid-template-columns: repeat(3, 38px); gap: 4px; }
+.tiles-mini span { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 5px; font: 600 17px/1 var(--tile-font); background: linear-gradient(140deg, #235c47, #153e32); border: 1px solid #538870; color: #add1be; }
+.tiles-mini .o { background: #12342a; border-color: #234c3e; color: #b8ddeb; }
+.tiles-mini .o.n2 { color: #a8d9a2; } .tiles-mini .o.n3 { color: #f1d486; }
+.tiles-mini .f { background: #4b3024; border-color: #d9865e; color: #ffb58e; }
+.tiles-mini .s { background: #315544; border: 2px solid #b3eacc; color: #c7f3d9; }
+.tiles-mini .x { background: none; border: 1px dashed #9fd9c312; }
+@media (max-width: 620px) { .diagram-row { grid-template-columns: minmax(0, 1fr); } }
+
+/* Pattern guide intro and quiz */
+.guide-intro { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 40px; align-items: center; padding-bottom: 12px; }
+.quiz { padding: 24px; border-radius: 22px; border: 1px solid #4D5A3A; background: linear-gradient(140deg, #22382A, #10241D); text-align: center; }
+.quiz h2 { margin: 0 0 18px; font-size: 21px; }
+.quiz .pattern-board { margin: auto; }
+.quiz .pattern-cell.covered { cursor: pointer; }
+.quiz .pattern-cell.covered:hover { border-color: var(--gold); transform: translateY(-2px); }
+.quiz-feedback { min-height: 48px; margin: 18px 0 0; font-size: 16px; color: var(--soft); }
+.text-button { padding: 8px 0; border: 0; background: none; color: var(--mint); font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: .2em; }
+.pattern-legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 28px 0 16px; font-size: 14px; color: var(--soft); }
+.legend-safe { color: #b3eacc; } .legend-mine { color: #ffa67d; }
+.pattern-note { max-width: 76ch; margin: 0; padding: 16px 20px; border-left: 2px solid var(--gold); background: #e5c46a08; font-size: 15px; color: var(--soft); }
+.guide-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
+.guide-jump a { padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; color: var(--ink); text-decoration: none; }
+.guide-jump a:hover { border-color: #3A5246; background: var(--surface); color: var(--ink); }
+
+/* Tiles */
+.pattern-board { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 46px)); gap: 4px; width: max-content; max-width: 100%; }
+.pattern-cell { width: 46px; height: 46px; box-sizing: border-box; display: grid; place-items: center; border-radius: 5px; font: 600 22px/1 var(--tile-font); }
+.pattern-cell.covered { background: linear-gradient(140deg, #235c47, #153e32); border: 1px solid #538870; box-shadow: inset 2px 2px #7ab89524, inset -2px -2px #0003; color: #add1be; }
+.pattern-cell.clue { background: #12342a; border: 1px solid #234c3e; color: #b8ddeb; }
+.pattern-cell.clue.n2 { color: #a8d9a2; } .pattern-cell.clue.n3 { color: #f1d486; } .pattern-cell.clue.n4 { color: #ddaff7; }
+.pattern-cell.outside { background: repeating-linear-gradient(135deg, transparent, transparent 5px, #9fd9c308 5px, #9fd9c308 6px); border: 1px dashed #9fd9c312; color: transparent; }
+.pattern-cell.flag, .pattern-board.show-answer .answer-mine { background: #4b3024; border: 1px solid #d9865e; color: #ffb58e; }
+.pattern-board.show-answer .answer-safe { background: #315544; border: 2px solid #b3eacc; color: #c7f3d9; }
+.pattern-board .answer-symbol { display: none; }
+.pattern-board.show-answer .answer-symbol { display: inline; }
+.pattern-board.show-answer .answer-marked .hidden-symbol { display: none; }
+button.pattern-cell { padding: 0; }
+
+/* Pattern library */
+.pattern-library-heading { margin: 72px 0 24px; font-size: 34px; line-height: 1.15; }
+.pattern-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.pattern-card { min-width: 0; padding: 24px; border-radius: 22px; background: var(--surface); border: 1px solid var(--line); scroll-margin-top: 24px; }
+.pattern-card .pattern-group { margin: 0 0 8px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.pattern-card h2 { margin: 0; font-size: 23px; line-height: 1.25; }
+.pattern-card p { color: var(--soft); }
+.pattern-stage { display: flex; justify-content: center; align-items: center; min-height: 202px; margin: 18px 0; padding: 22px 8px; overflow: hidden; border-block: 1px solid #9fd9c30b; background: radial-gradient(ellipse, #163e3055, transparent 70%); }
+.pattern-answer { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.pattern-answer button { min-height: 40px; padding: 8px 14px; border: 1px solid #52745e; border-radius: 10px; background: #153c30; color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; }
+.pattern-answer button:hover { border-color: var(--mint); }
+.pattern-answer small { font-size: 12px; color: var(--dim); }
+.pattern-card details { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.pattern-card summary { cursor: pointer; color: var(--mint); }
+.pattern-card details p { margin: 8px 0 0; font-size: 16px; }
+.guide-end { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 40px; margin: 56px 0 0; }
+.guide-end h2 { margin: 0 0 8px; font-size: 22px; }
+.guide-end p { margin: 0; color: var(--soft); }
+
+/* Practice lessons */
+.practice-card { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 32px; margin: 24px 0; padding: 28px; border-radius: 22px; background: var(--surface); border: 1px solid var(--line); scroll-margin-top: 24px; }
+.practice-card h2 { margin: 0 0 16px; font-size: clamp(25px, 3vw, 32px); line-height: 1.15; }
+.lesson-copy, .lesson-demo { min-width: 0; }
+.lesson-copy p, .lesson-copy li { color: var(--soft); }
+.lesson-copy strong { color: var(--ink); }
+.lesson-kicker { margin: 0 0 12px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.lesson-demo { align-self: start; padding: 24px 18px; border-radius: 16px; border: 1px solid #395a49; background: radial-gradient(ellipse at top, #254635, #10271f 80%); text-align: center; }
+.lesson-meter { margin-bottom: 24px; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: var(--gold); }
+.pattern-board.practice-board { margin: 0 auto; grid-template-columns: repeat(var(--cols), 56px); gap: 6px; }
+.practice-board .pattern-cell { width: 56px; height: 56px; font-size: 25px; }
+.practice-board button { cursor: pointer; }
+.practice-board button:enabled:hover { border-color: var(--gold); }
+.practice-board button.chord-target { border: 2px solid var(--gold); color: #d4efc2; }
+.practice-board .is-flagged { background: #4b3024; border-color: #d9865e; color: #ffb58e; }
+.practice-board .is-safe { background: #315544; border: 2px solid #b3eacc; color: #c7f3d9; }
+.practice-board .is-mine, .practice-board .is-wrong { background: #572c25; border: 2px solid #ffa48b; color: #ffe0d2; }
+.practice-board .is-reduced { border: 2px solid var(--gold); background: #293e29; }
+.lesson-feedback { min-height: 100px; margin: 22px 0 16px; font-size: 16px; line-height: 1.5; color: var(--ink); }
+.lesson-caption { min-height: 36px; margin: 14px 0 0; font-size: 13px; line-height: 1.4; color: var(--soft); }
+.lesson-button { min-height: 44px; padding: 12px 16px; border: 0; border-radius: 10px; background: var(--gold); color: #1A1404; font: inherit; font-weight: 600; line-height: 1.3; cursor: pointer; }
+.lesson-button:disabled { opacity: .65; }
+.lesson-controls { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: center; }
+.lesson-solution { padding: 14px 0; border-top: 1px solid var(--line); }
+.lesson-solution summary { padding: 8px 0; cursor: pointer; color: var(--mint); }
+.reduction-steps { margin: 20px 0 0; padding-left: 23px; }
+.reduction-steps li { margin: 0 0 8px; padding: 6px 8px; border-left: 2px solid transparent; }
+.reduction-steps li[aria-current="step"] { background: #e5c46a0d; border-color: var(--gold); }
+.practice-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; padding: 12px 0; }
+.practice-cta p { margin: 0; font-size: 17px; }
+html:not(.js) .lesson-controls, html:not(.js) [data-chord-reset], html:not(.js) .pattern-answer button { display: none; }
+
+@media (max-width: 860px) {
+  .guide-intro, .practice-card { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .lesson-demo { width: 100%; max-width: 440px; justify-self: center; }
+  .pattern-cards, .guide-end { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 580px) {
+  .practice-card { padding: 20px 16px; }
+  .lesson-demo { padding: 20px 10px; }
+  .practice-cta { flex-direction: column; text-align: center; }
+  .pattern-library-heading { font-size: 28px; }
+}

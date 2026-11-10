@@ -11,7 +11,7 @@
   <link rel="icon" href="/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/site.css?v=2">
+  <link rel="stylesheet" href="/assets/site.css?v=3">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ticerapps">
   <meta property="og:title" content="Minesweeper: Strait of Hormuz">
@@ -41,7 +41,7 @@
     <div class="wrap">
       <a class="brand" href="/"><img class="logo" src="/assets/brand/ticerapps-logo.webp?v=2" alt="" width="32" height="32">Ticerapps</a>
       <nav class="nav" aria-label="Main">
-        <a href="/#apps">Apps</a>
+        <!-- apps-menu:start --><details class="apps-menu"><summary>Apps <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="apps-panel"><div class="apps-group"><a class="group-label" href="/minesweeper/">Minesweeper <span>Games &amp; guides →</span></a><a class="apps-item" href="/minesweeper-strait-of-hormuz/"><img src="/assets/apps/minesweeper/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Minesweeper: Strait of Hormuz</strong><small>iOS · Android · browser</small></span></a><a class="apps-item" href="/gem-sweeper/"><img src="/assets/apps/gem-sweeper/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Gem Sweeper</strong><small>iOS · Android</small></span><span class="pill pill-soon">SOON</span></a></div><div class="apps-group"><p class="group-label" style="margin:0">Block puzzle</p><a class="apps-item" href="/quilt-bee/"><img src="/assets/apps/quilt-bee/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Quilt Bee: Block Puzzle</strong><small>Android · iOS soon</small></span></a></div><div class="apps-group"><p class="group-label" style="margin:0">Tools</p><a class="apps-item" href="/apportionment-calculator/"><img src="/assets/apps/apportionment/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>Apportionment Calculator</strong><small>iOS · Mac · Android</small></span></a></div><a class="apps-all" href="/#apps">All apps →</a></div></details><!-- apps-menu:end -->
         <a href="/#guides">Guides</a>
         <a href="/support/">Privacy</a>
         <a href="#support">Support</a>
@@ -52,7 +52,7 @@
   <main id="main">
     <section class="wrap app-hero" aria-labelledby="app-title">
       <div class="stack">
-        <p class="crumbs" style="margin-bottom: 8px"><a href="/#apps">Apps</a> <span aria-hidden="true">/</span> Minesweeper: Strait of Hormuz</p>
+        <p class="crumbs" style="margin-bottom: 8px"><a href="/minesweeper/">Minesweeper</a> <span aria-hidden="true">/</span> Minesweeper: Strait of Hormuz</p>
         <img class="app-icon" src="/assets/apps/minesweeper/icon.webp" alt="Minesweeper: Strait of Hormuz icon" width="384" height="384">
         <div>
           <h1 class="display app" id="app-title">Minesweeper: Strait of Hormuz</h1>
@@ -90,15 +90,15 @@
     <section class="wrap section" aria-labelledby="site-title">
       <div class="band wide-text">
         <div class="stack" style="gap: 16px">
-          <p class="eyebrow">The game's own site</p>
-          <h2 id="site-title">Guides, strategy and the browser demo live at minesweeperstraitofhormuz.com</h2>
+          <p class="eyebrow">Learn &amp; play</p>
+          <h2 id="site-title">Play free in your browser at minesweeperstraitofhormuz.com, and learn the patterns here</h2>
           <div class="actions"><a class="btn btn-gold" href="https://minesweeperstraitofhormuz.com/">Visit the site
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a></div>
         </div>
         <ul class="list-links">
-          <li><a href="https://minesweeperstraitofhormuz.com/how-to-play/"><span>How to play</span><span aria-hidden="true">→</span></a></li>
-          <li><a href="https://minesweeperstraitofhormuz.com/strategy/"><span>Strategy and 12 patterns</span><span aria-hidden="true">→</span></a></li>
-          <li><a href="https://minesweeperstraitofhormuz.com/no-guess-minesweeper/"><span>No-guess minesweeper</span><span aria-hidden="true">→</span></a></li>
+          <li><a href="https://minesweeperstraitofhormuz.com/how-to-play/"><span>Controls and boards</span><span aria-hidden="true">→</span></a></li>
+          <li><a href="/minesweeper/strategy/"><span>Strategy and 12 patterns</span><span aria-hidden="true">→</span></a></li>
+          <li><a href="/minesweeper/no-guess/"><span>No-guess minesweeper</span><span aria-hidden="true">→</span></a></li>
           <li><a href="https://btror.itch.io/minesweeper-strait-of-hormuz"><span>Play the demo on itch.io</span><span aria-hidden="true">→</span></a></li>
         </ul>
       </div>
