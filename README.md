@@ -23,10 +23,15 @@ the link's campaign tags and stores nothing.
 - `/gem-sweeper/`: Gem Sweeper page and support, marked coming soon. When it launches,
   swap the two dashed "Coming soon" store blocks for the official badges.
 - `/support/`: privacy and support hub listing every app's policy.
-- `/quilt-bee/privacy/`, `/quilt-bee/delete-data/`, `/privacy/` (Minesweeper: Strait of
+- `/quilt-bee/privacy/`, `/privacy/` (Minesweeper: Strait of
   Hormuz), `/gem-sweeper/privacy/`: policies. Store listings and released apps link to
   these exact URLs; never move them. The 2026-11-10 redesign changed only their header,
   footer and stylesheet, not their text.
+- `/quilt-bee/delete-data/` was removed on 2026-11-10 at the owner's request: current Quilt Bee
+  creates no accounts of its own (Play Games / Game Center only). Play Console's Data safety form
+  was updated the same day (no account creation; data-deletion link
+  `/quilt-bee/privacy/#choices`), and the Quilt Bee policy now routes deletion requests,
+  including earlier Firebase test-build records, to ticerapps@gmail.com.
 - `/app-ads.txt`: authorized advertising seller declaration; retain the existing
   Google publisher ID `pub-9806107692884322`.
 - `/sitemap.xml`, `/robots.txt`: add new pages to the sitemap.
