@@ -1,6 +1,6 @@
 # ticerapps.com
 
-Ticer Apps' static GitHub Pages site, served at https://ticerapps.com (custom domain set
+Ticerapps' static GitHub Pages site, served at https://ticerapps.com (custom domain set
 on 2026-11-10; old `ticerapps.github.io/...` links redirect to the same path). No build
 step, JavaScript, analytics, cookies, third-party fonts, or trackers are added by this site.
 
