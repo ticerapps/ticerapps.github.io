@@ -3,93 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Meet Quilt Bee, a cozy, untimed block puzzle from Ticer Apps. Endless play, a differently shaped daily puzzle, and the satisfaction of a perfect fit. Currently in testing on iOS and Android.">
+  <title>Quilt Bee: Block Puzzle · Ticer Apps</title>
+  <meta name="description" content="Quilt Bee is a cozy, untimed block puzzle with satisfying clears, snug-fit bonuses and a fresh daily shape. Free on Google Play, coming soon to the App Store.">
   <meta name="referrer" content="no-referrer">
-  <meta name="theme-color" content="#fcf8ef">
-  <meta property="og:title" content="Quilt Bee — find your fit">
-  <meta property="og:description" content="A cozy, untimed block puzzle. Currently in testing on iOS and Android.">
-  <meta property="og:image" content="https://ticerapps.github.io/quilt-bee/assets/icon-512.png">
-  <meta property="og:url" content="https://ticerapps.github.io/quilt-bee/">
+  <meta name="theme-color" content="#0C1210">
+  <link rel="canonical" href="https://ticerapps.com/quilt-bee/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
   <meta property="og:type" content="website">
-  <title>Quilt Bee — find your fit | Ticer Apps</title>
-  <link rel="canonical" href="https://ticerapps.github.io/quilt-bee/">
-  <link rel="icon" type="image/png" href="/quilt-bee/assets/icon-512.png">
-  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:site_name" content="Ticer Apps">
+  <meta property="og:title" content="Quilt Bee: Block Puzzle">
+  <meta property="og:description" content="Cozy, untimed block puzzles with satisfying clears and a fresh daily shape.">
+  <meta property="og:url" content="https://ticerapps.com/quilt-bee/">
+  <meta property="og:image" content="https://ticerapps.com/assets/apps/quilt-bee/icon.webp">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Quilt Bee: Block Puzzle",
+    "url": "https://ticerapps.com/quilt-bee/",
+    "image": "https://ticerapps.com/assets/apps/quilt-bee/icon.webp",
+    "description": "Cozy, untimed block puzzles with satisfying clears and a fresh daily shape.",
+    "applicationCategory": "GameApplication",
+    "genre": "Puzzle",
+    "operatingSystem": "Android",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.ticerapps.quiltbee",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Organization", "name": "Ticer Apps", "url": "https://ticerapps.com/" }
+  }
+  </script>
 </head>
-<body class="quilt">
+<body class="theme-quilt">
   <a class="skip" href="#main">Skip to content</a>
-  <div class="wrap">
-    <nav class="site-nav" aria-label="Site navigation">
-      <a class="brand" href="/">Ticer Apps</a>
-      <div class="links">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>ticer apps</a>
+      <nav class="nav" aria-label="Main">
+        <a href="/#apps">Apps</a>
+        <a href="/#guides">Guides</a>
+        <a href="/support/">Privacy</a>
         <a href="#support">Support</a>
-        <a href="/quilt-bee/privacy/">Privacy</a>
-      </div>
-    </nav>
-    <main id="main">
-      <section class="hero" aria-labelledby="game-title">
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap app-hero" aria-labelledby="app-title">
+      <div class="stack">
+        <p class="crumbs" style="margin-bottom: 8px"><a href="/#apps">Apps</a> <span aria-hidden="true">/</span> Quilt Bee</p>
+        <img class="app-icon" src="/assets/apps/quilt-bee/icon.webp" alt="Quilt Bee icon" width="384" height="384">
         <div>
-          <span class="eyebrow">Make a little room for a little joy.</span>
-          <h1 id="game-title">Quilt Bee</h1>
-          <p class="lead">An untimed block puzzle with a soft spot for the perfect fit.</p>
-          <p>Place your pieces, clear a little space, and settle into your next good move. There’s no timer to beat. Just one satisfying fit after another.</p>
-          <div class="actions">
-            <a class="button" href="#how-to-play">Find your fit</a>
-            <a href="#support">Get in touch</a>
-          </div>
-          <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>In testing · iOS &amp; Android</span>
-          <p class="availability">Quilt Bee isn’t publicly available yet. Download links will appear here when it launches.</p>
+          <h1 class="display app" id="app-title">Quilt Bee</h1>
+          <p class="tagline">Block Puzzle</p>
         </div>
-        <div class="hero-art">
-          <img class="hero-icon" src="/quilt-bee/assets/icon-512.png" alt="Quilt Bee’s plush yellow bee holding a coral L-shaped quilt piece" width="512" height="512" fetchpriority="high">
+        <p class="lead">Cozy, untimed block puzzles with satisfying clears and a fresh daily shape. Make a little room, find the perfect fit, and come back tomorrow.</p>
+        <div class="actions">
+          <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.ticerapps.quiltbee"><img class="badge-google" src="/assets/badges/google-play-badge.png" alt="Get it on Google Play" width="646" height="250"></a>
+          <span class="soon-store">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+            <span><small>COMING SOON</small><strong>App Store</strong></span>
+          </span>
         </div>
-      </section>
-
-      <div class="intro-line" aria-label="Game highlights">
-        <span>No timer</span>
-        <span>Endless possibilities</span>
-        <span>A fresh daily shape</span>
+        <p class="facts">Free · Contains ads · In-app purchases</p>
       </div>
+      <figure class="shots" aria-label="Screenshots">
+        <img src="/assets/apps/quilt-bee/shot-2.webp" alt="Today's daily shape, a new board every day" width="540" height="960">
+        <img src="/assets/apps/quilt-bee/shot-1.webp" alt="Cozy blocks, clever moves: the main board" width="540" height="960">
+        <img src="/assets/apps/quilt-bee/shot-3.webp" alt="Board styles you can choose" width="540" height="960">
+      </figure>
+    </section>
 
-      <section id="how-to-play" aria-labelledby="play-heading">
-        <h2 class="section-heading" id="play-heading">A small puzzle. Your own pace.</h2>
-        <div class="feature-grid">
-          <article class="feature">
-            <span class="number">01 / MAKE ROOM</span>
-            <h3>Place. Clear. Keep going.</h3>
-            <p>Fit blocks onto an 8 × 8 board. Complete rows and columns to clear space, build combos, and see how far a little planning can take you.</p>
-          </article>
-          <article class="feature">
-            <span class="number">02 / FIND YOUR SNUG</span>
-            <h3>That just-right feeling.</h3>
-            <p>A piece that fits an empty space exactly earns a “snug” bonus. Leave room for possibilities, then enjoy the moment it all comes together.</p>
-          </article>
-          <article class="feature">
-            <span class="number">03 / A DAILY RITUAL</span>
-            <h3>A new shape to settle into.</h3>
-            <p>Come back for the daily puzzle, with the same board and piece sequence for everyone. Finish a daily board to keep your streak growing.</p>
-          </article>
+    <section class="wrap section" aria-labelledby="inside-title">
+      <h2 class="section-title" id="inside-title">What's inside</h2>
+      <div class="grid-3">
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/><path d="M4 4l16 16"/></svg>
+          <h3>No clock, ever</h3>
+          <p>Every round is untimed. Think as long as you like.</p>
         </div>
-      </section>
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          <h3>A new daily shape</h3>
+          <p>One board a day, with the same pieces for everyone. Finish it to keep your streak growing.</p>
+        </div>
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><path d="M14 17l2 2 4-4"/></svg>
+          <h3>Snug fits</h3>
+          <p>Drop a piece into a gap that fits exactly and earn a bonus.</p>
+        </div>
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+          <h3>Helpers when you're stuck</h3>
+          <p>Rotate a piece, undo a move, or swap for a new set.</p>
+        </div>
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          <h3>Clears that sing</h3>
+          <p>Combos answer with soft piano and celesta notes.</p>
+        </div>
+        <div class="feature">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><path d="M12 2a10 10 0 0 0 0 20c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1.1.9-2 2-2h2.4A5.6 5.6 0 0 0 22 9.8C22 5.5 17.5 2 12 2z"/></svg>
+          <h3>Make it yours</h3>
+          <p>Quilt, wood and jewel boards, with palettes and finishes to unlock.</p>
+        </div>
+      </div>
+    </section>
 
-      <section class="support-panel" id="support" aria-labelledby="support-heading">
+    <section class="wrap section" id="support" aria-labelledby="help-title">
+      <div class="help">
         <div>
-          <h2 id="support-heading">A little help?</h2>
-          <p>Found a bug, have a question, or want to share a thought about Quilt Bee? We’d like to hear from you.</p>
+          <h2 id="help-title">A little help?</h2>
+          <p>Found a bug, have a question, or want to share a thought about Quilt Bee? We'd like to hear from you.</p>
           <p class="contact"><a href="mailto:ticerapps@gmail.com?subject=Quilt%20Bee%20support">ticerapps@gmail.com</a></p>
         </div>
         <div>
-          <p class="support-note">For a game issue, include your device, iOS or Android version, Quilt Bee build number, and what happened. Screenshots can help. Please leave out passwords and payment-card details.</p>
-          <p class="support-note">If a purchased theme or permanent upgrade is missing, try the game’s <strong>Restore purchases</strong> option. For other purchase issues, or if you still need help, contact us.</p>
-          <p><a href="/quilt-bee/privacy/">Read Quilt Bee’s privacy policy <span aria-hidden="true">→</span></a></p>
-          <p><a href="/quilt-bee/delete-data/">Request data deletion</a></p>
+          <p>For a game issue, include your device, iOS or Android version, Quilt Bee build number, and what happened. Screenshots can help. Please leave out passwords and payment-card details.</p>
+          <p>If a purchased theme or permanent upgrade is missing, try the game's <strong>Restore purchases</strong> option. For other purchase issues, or if you still need help, contact us.</p>
+          <p><a href="/quilt-bee/privacy/">Quilt Bee privacy policy</a> · <a href="/quilt-bee/delete-data/">Request data deletion</a></p>
         </div>
-      </section>
-    </main>
-    <footer>
-      <span>© 2026 Ticer Apps. Made for a little everyday play.</span>
-      <a href="/">More from Ticer Apps</a>
-    </footer>
-  </div>
+      </div>
+    </section>
+
+    <section class="wrap section" aria-labelledby="more-title">
+      <h2 class="section-title" id="more-title" style="font-size: 26px; margin-bottom: 24px">More from Ticer Apps</h2>
+      <div class="grid-3">
+        <a class="mini" href="/minesweeper-strait-of-hormuz/"><img src="/assets/apps/minesweeper/icon.webp" alt="" width="384" height="384" loading="lazy"><span><strong>Minesweeper: Strait of Hormuz</strong><small>Logic puzzle · iOS, Android, web</small></span></a>
+        <a class="mini" href="/apportionment-calculator/"><img src="/assets/apps/apportionment/icon.webp" alt="" width="384" height="384" loading="lazy"><span><strong>Apportionment Calculator</strong><small>Education · iOS, Mac, Android</small></span></a>
+        <a class="mini" href="/gem-sweeper/"><img src="/assets/apps/gem-sweeper/icon.webp" alt="" width="384" height="384" loading="lazy"><span><strong>Gem Sweeper</strong><small>Mine puzzle · Coming soon</small></span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Ticer Apps</span>
+      <nav aria-label="Footer">
+        <a href="/support/">Privacy policies</a>
+        <a href="/support/#help">Support</a>
+        <a href="mailto:ticerapps@gmail.com">ticerapps@gmail.com</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

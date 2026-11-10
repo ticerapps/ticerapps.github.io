@@ -1,29 +1,51 @@
-# ticerapps.github.io
+# ticerapps.com
 
-Ticer Apps' static GitHub Pages site. No build step, JavaScript, analytics,
-third-party fonts, or trackers are added by this site.
+Ticer Apps' static GitHub Pages site, served at https://ticerapps.com (custom domain set
+on 2026-11-10; old `ticerapps.github.io/...` links redirect to the same path). No build
+step, JavaScript, analytics, cookies, third-party fonts, or trackers are added by this site.
 
-- `/`: both games and support links.
-- `/quilt-bee/`: Quilt Bee product information and support. The app is in testing;
-  do not add internal testing links or imply public store availability.
-- `/quilt-bee/privacy/`: Quilt Bee's app-specific privacy policy.
-- `/quilt-bee/delete-data/`: instructions for deleting the current player's local
-  progress and wallet and recording the reset in supported platform cloud saves,
-  plus an email request route for retained earlier Firebase/leaderboard records
-  and other information processed for Quilt Bee. Current v1 has no Firebase or
-  public leaderboards. In-app deletion does not erase earlier hosted records or
-  store/provider accounts; the email link is not an automatic deletion form.
-- `/privacy/`: existing Minesweeper: Strait of Hormuz privacy policy. Keep this
-  published URL stable for existing app/store links.
-- `/gem-sweeper/`: Gem Sweeper product information and support; public release pending.
-- `/gem-sweeper/privacy/`: Gem Sweeper-specific privacy policy, including platform progress,
-  achievements, delayed banners, interstitials, optional rewarded gems, purchases and RevenueCat.
+## Pages
+
+- `/`: home. Every public app with its stores, prices and ratings, Gem Sweeper as
+  coming soon, the browser Minesweeper band, guides, and social links.
+- `/quilt-bee/`: Quilt Bee page and support (`#support`). Free on Google Play; the App
+  Store is shown as coming soon until it is live there.
+- `/minesweeper-strait-of-hormuz/`: the game's page here. Its full home, guides and
+  browser demo are the separate site minesweeperstraitofhormuz.com
+  (repo `ticerapps/minesweeperstraitofhormuz.com`). Google Play lists it as
+  "Minesweeper: REDACTED".
+- `/apportionment-calculator/`: **not in this repo.** It is the project site of
+  `ticerapps/apportionment-calculator` (index.html is the app page and support URL,
+  privacy.html the policy). It uses this repo's `/assets/` and `/favicon.svg`. Never
+  add an `apportionment-calculator/` folder here: it would collide with that site.
+- `/gem-sweeper/`: Gem Sweeper page and support, marked coming soon. When it launches,
+  swap the two dashed "Coming soon" store blocks for the official badges.
+- `/support/`: privacy and support hub listing every app's policy.
+- `/quilt-bee/privacy/`, `/quilt-bee/delete-data/`, `/privacy/` (Minesweeper: Strait of
+  Hormuz), `/gem-sweeper/privacy/`: policies. Store listings and released apps link to
+  these exact URLs; never move them. The 2026-11-10 redesign changed only their header,
+  footer and stylesheet, not their text.
 - `/app-ads.txt`: authorized advertising seller declaration; retain the existing
   Google publisher ID `pub-9806107692884322`.
+- `/sitemap.xml`, `/robots.txt`: add new pages to the sitemap.
+- `google982a63541b8cf743.html`: Google site verification; keep.
 
-Quilt Bee's icon is the approved Google Play icon copied from the game repository
-at `store/google-play/icon-512.png`. The website uses the local copy in
-`quilt-bee/assets/` and makes no external image/font request.
+## Assets
 
-Preview from this directory with `python3 -m http.server 8769 --bind 127.0.0.1`.
-Review desktop and narrow mobile layouts and verify local links before publishing.
+- `assets/site.css`: the only stylesheet. Per-app accents come from body classes
+  (`theme-quilt`, `theme-apportion`, `theme-gem`; Minesweeper uses the default mint).
+- `assets/fonts/`: self-hosted Inter and Space Grotesk (latin subsets, SIL OFL; licences
+  beside them).
+- `assets/badges/`: official App Store and Google Play badges, copied from the
+  minesweeperstraitofhormuz.com repo.
+- `assets/apps/<app>/`: 384px WebP icons and 540px-wide WebP screenshots. Quilt Bee's icon
+  is the one Google Play serves; screenshots come from each game's store listing assets.
+  `quilt-bee/assets/icon-512.png` is the earlier plush-bee icon, kept for old links.
+
+Ratings and prices on the home and app pages are typed in by hand (US store, 2026-11-10);
+update them when they change.
+
+Preview the whole domain locally by copying this repo and the calculator repo into one
+folder (`apportionment-calculator/` inside it) and serving it with
+`python3 -m http.server 8769 --bind 127.0.0.1`. Check desktop and 375px layouts before
+publishing.
