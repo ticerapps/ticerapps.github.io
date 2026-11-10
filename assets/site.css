@@ -52,9 +52,9 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; overflow-wrap
 /* Header and footer */
 .site-header { border-bottom: 1px solid var(--rule); }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 32px; padding-top: 16px; padding-bottom: 16px; }
-.brand { display: flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink); text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; }
+.brand { display: flex; align-items: center; gap: 10px; min-height: 44px; color: var(--ink); text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; }
 .brand:hover { color: var(--ink); }
-.logo { width: 36px; height: 36px; border-radius: 9px; flex: none; }
+.logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
 .nav { display: flex; flex-wrap: wrap; gap: 0 28px; font-size: 15px; font-weight: 500; }
 .nav a { display: inline-block; padding: 10px 0; color: var(--ink); text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--mint); }
@@ -291,3 +291,13 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; overflow-wrap
 .doc > header h1 { margin-bottom: 2px; }
 .doc > header p { margin: 0; color: var(--dim); }
 .doc .updated { font-size: 14px; color: var(--dim); }
+
+/* Download links (/get/<app>/): a small centred card shown while the redirect happens */
+.get-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 16px; }
+.get-card { width: 100%; max-width: 440px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+.get-card .app-icon { width: 104px; height: 104px; }
+.get-card h1 { margin: 4px 0 0; font-size: 30px; line-height: 1.15; }
+.get-card .status { margin: 0; min-height: 1.6em; color: var(--dim); }
+.get-card .actions { justify-content: center; }
+.get-card .by { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; color: var(--dim); font-size: 14px; text-decoration: none; }
+.get-card .by img { width: 20px; height: 20px; border-radius: 5px; }

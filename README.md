@@ -2,7 +2,9 @@
 
 Ticerapps' static GitHub Pages site, served at https://ticerapps.com (custom domain set
 on 2026-11-10; old `ticerapps.github.io/...` links redirect to the same path). No build
-step, JavaScript, analytics, cookies, third-party fonts, or trackers are added by this site.
+step, analytics, cookies, third-party fonts, or trackers are added by this site. The only
+JavaScript is `assets/get.js` on the `/get/` download links below; it reads the device type and
+the link's campaign tags and stores nothing.
 
 ## Pages
 
@@ -30,10 +32,40 @@ step, JavaScript, analytics, cookies, third-party fonts, or trackers are added b
 - `/sitemap.xml`, `/robots.txt`: add new pages to the sitemap.
 - `google982a63541b8cf743.html`: Google site verification; keep.
 
+## Download links for ads (`/get/`)
+
+One link per app that sends each visitor to the right store, for TikTok, Instagram, Facebook,
+YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
+
+| Link | iPhone / iPad | Android | Mac | Other computers |
+| --- | --- | --- | --- | --- |
+| `ticerapps.com/get/quilt-bee/` | Quilt Bee page (not on the App Store yet) | Google Play | app page | app page |
+| `ticerapps.com/get/minesweeper/` | App Store | Google Play | browser game | browser game |
+| `ticerapps.com/get/apportionment/` | App Store | Play, Lite | Mac App Store | app page |
+| `ticerapps.com/get/apportionment-pro/` | App Store | Play, Pro | Mac App Store | app page |
+| `ticerapps.com/get/gem-sweeper/` | Gem Sweeper page until launch | same | same | same |
+
+- Each page also shows both store badges, so a visitor whose in-app browser blocks the
+  automatic redirect can still tap through. Crawlers (link previews, ad review) stay on the
+  page and see the badges.
+- Campaign tags: add `?src=tiktok&c=launch-week`, or let the ad platform append standard
+  `utm_source` / `utm_medium` / `utm_campaign` / `utm_content`. Google Play receives them as
+  the install referrer (Play Console acquisition reports). The App Store only receives a
+  campaign once `data-apple-pt` on each `/get/` page holds the provider token from App Store
+  Connect's campaign link generator; it is empty for now.
+- `?stay` shows the page without redirecting, to check where a device would go.
+- When an app reaches a store, fill its `data-ios` / `data-android` attribute and swap the
+  matching "Coming soon" block for the badge with `data-store="ios"` or `data-store="android"`.
+- The pages are `noindex` and left out of the sitemap so they don't compete with the app pages.
+
 ## Assets
 
-- `assets/site.css`: the only stylesheet. Per-app accents come from body classes
+- `assets/site.css`: the only stylesheet, linked as `site.css?v=N`; bump N in every page when
+  the CSS changes, because GitHub Pages lets browsers cache it for 10 minutes. Per-app accents come from body classes
   (`theme-quilt`, `theme-apportion`, `theme-gem`; Minesweeper uses the default mint).
+- `assets/brand/`: the orange T Ticerapps logo (Google Play developer icon, from
+  `~/Desktop/Ticerapps-branding-2026-10-21/selected-workshop/`); `favicon.png` and
+  `apple-touch-icon.png` at the root are made from it.
 - `assets/fonts/`: self-hosted Inter and Space Grotesk (latin subsets, SIL OFL; licences
   beside them).
 - `assets/badges/`: official App Store and Google Play badges, copied from the
