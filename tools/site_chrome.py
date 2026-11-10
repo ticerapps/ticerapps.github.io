@@ -10,7 +10,7 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-CSS_VERSION = 3
+CSS_VERSION = 4
 
 CHEVRON = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>'
 
@@ -30,8 +30,11 @@ GROUPS = [
 
 
 def menu():
-    parts = ['<!-- apps-menu:start --><details class="apps-menu">',
-             f'<summary>Apps {CHEVRON}</summary>', '<div class="apps-panel">']
+    # The panel is a sibling of the <details>, not its child: browsers keep a closed <details>
+    # element's content hidden whatever the CSS says, so hover could never reveal it.
+    parts = ['<!-- apps-menu:start --><div class="apps-menu"><details class="apps-toggle">',
+             f'<summary aria-controls="apps-panel">Apps {CHEVRON}</summary></details>',
+             '<div class="apps-panel" id="apps-panel">']
     for name, link, apps in GROUPS:
         parts.append('<div class="apps-group">')
         if link:
@@ -42,7 +45,7 @@ def menu():
             pill = '<span class="pill pill-soon">SOON</span>' if soon else ''
             parts.append(f'<a class="apps-item" href="{href}"><img src="/assets/apps/{icon}/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>{title}</strong><small>{where}</small></span>{pill}</a>')
         parts.append('</div>')
-    parts.append('<a class="apps-all" href="/#apps">All apps →</a></div></details><!-- apps-menu:end -->')
+    parts.append('<a class="apps-all" href="/#apps">All apps →</a></div></div><!-- apps-menu:end -->')
     return ''.join(parts)
 
 

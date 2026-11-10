@@ -303,16 +303,17 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; overflow-wrap
 .get-card .by img { width: 20px; height: 20px; border-radius: 5px; }
 
 /* Apps menu in the header. Tap or click toggles the <details>; with a mouse, hovering opens it too.
-   No script. The markup is written into every page by tools/site_chrome.py. */
+   No script. The panel sits beside the <details> (a closed one hides its own content from CSS).
+   The markup is written into every page by tools/site_chrome.py. */
 .nav { align-items: center; }
 .apps-menu { position: relative; }
-.apps-menu summary { display: inline-flex; align-items: center; gap: 6px; padding: 10px 0; cursor: pointer; list-style: none; color: var(--ink); }
-.apps-menu summary::-webkit-details-marker { display: none; }
-.apps-menu summary svg { transition: transform .15s; }
-.apps-menu[open] summary svg { transform: rotate(180deg); }
-.apps-menu summary:hover, .apps-menu[open] summary { color: var(--mint); }
+.apps-toggle summary { display: inline-flex; align-items: center; gap: 6px; padding: 10px 0; cursor: pointer; list-style: none; color: var(--ink); }
+.apps-toggle summary::-webkit-details-marker { display: none; }
+.apps-toggle summary svg { transition: transform .15s; }
+.apps-toggle[open] summary svg { transform: rotate(180deg); }
+.apps-toggle summary:hover, .apps-toggle[open] summary { color: var(--mint); }
 .apps-panel { display: none; position: absolute; z-index: 20; top: calc(100% + 6px); left: -20px; width: 380px; padding: 10px; border-radius: 18px; background: var(--surface); border: 1px solid #2C3D35; box-shadow: 0 24px 48px rgba(0, 0, 0, .55); }
-.apps-menu[open] .apps-panel { display: block; }
+.apps-toggle[open] + .apps-panel { display: block; }
 @media (hover: hover) and (pointer: fine) {
   .apps-menu:hover .apps-panel { display: block; }
   .apps-menu:hover summary { color: var(--mint); }
