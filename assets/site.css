@@ -52,12 +52,9 @@ h1, h2, h3 { font-family: var(--display); letter-spacing: -0.02em; overflow-wrap
 /* Header and footer */
 .site-header { border-bottom: 1px solid var(--rule); }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 32px; padding-top: 16px; padding-bottom: 16px; }
-.brand { display: flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink); text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+.brand { display: flex; align-items: center; gap: 12px; min-height: 44px; color: var(--ink); text-decoration: none; font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; }
 .brand:hover { color: var(--ink); }
-.mark { display: grid; grid-template-columns: repeat(2, 12px); gap: 3px; }
-.mark span { width: 12px; height: 12px; border-radius: 3px; background: var(--mint); }
-.mark span:nth-child(2) { background: var(--gold); }
-.mark span:nth-child(3) { background: #2C3D35; }
+.logo { width: 36px; height: 36px; border-radius: 9px; flex: none; }
 .nav { display: flex; flex-wrap: wrap; gap: 0 28px; font-size: 15px; font-weight: 500; }
 .nav a { display: inline-block; padding: 10px 0; color: var(--ink); text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--mint); }
