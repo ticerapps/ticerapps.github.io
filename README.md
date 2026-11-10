@@ -50,9 +50,10 @@ YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
   page and see the badges.
 - Campaign tags: add `?src=tiktok&c=launch-week`, or let the ad platform append standard
   `utm_source` / `utm_medium` / `utm_campaign` / `utm_content`. Google Play receives them as
-  the install referrer (Play Console acquisition reports). The App Store only receives a
-  campaign once `data-apple-pt` on each `/get/` page holds the provider token from App Store
-  Connect's campaign link generator; it is empty for now.
+  the install referrer (Play Console acquisition reports). The App Store receives `ct=<source>-<campaign>`
+  with the provider token `123947823` (`data-apple-pt` on each `/get/` page; App Store Connect
+  > App Analytics > Acquisition > Campaigns). The token only names the developer account, so
+  it is safe to publish; Apple puts it in every public campaign link.
 - `?stay` shows the page without redirecting, to check where a device would go.
 - When an app reaches a store, fill its `data-ios` / `data-android` attribute and swap the
   matching "Coming soon" block for the badge with `data-store="ios"` or `data-store="android"`.
