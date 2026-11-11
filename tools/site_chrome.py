@@ -25,7 +25,7 @@ GROUPS = [
     ]),
     ("Tools", None, [
         ("/apportionment-calculator/", "apportionment", "Apportionment Calculator", "iPhone · iPad · Mac", False),
-        ("/apportionment-calculator/#versions", "apportionment", "Apportionment Calculator Lite", "Android · Free", False),
+        ("/apportionment-calculator/#versions", "apportionment/icon-lite", "Apportionment Calculator Lite", "Android · Free", False),
         ("/apportionment-calculator/#versions", "apportionment", "Apportionment Calculator Pro", "Android · $4.99", False),
     ]),
 ]
@@ -44,8 +44,10 @@ def menu():
         else:
             parts.append(f'<p class="group-label" style="margin:0">{name}</p>')
         for href, icon, title, where, soon in apps:
+            # "app" uses assets/apps/app/icon.webp; "app/name" names another file there.
+            icon_path = icon if '/' in icon else icon + '/icon'
             pill = '<span class="pill pill-soon">SOON</span>' if soon else ''
-            parts.append(f'<a class="apps-item" href="{href}"><img src="/assets/apps/{icon}/icon.webp" alt="" width="40" height="40" loading="lazy"><span><strong>{title}</strong><small>{where}</small></span>{pill}</a>')
+            parts.append(f'<a class="apps-item" href="{href}"><img src="/assets/apps/{icon_path}.webp" alt="" width="40" height="40" loading="lazy"><span><strong>{title}</strong><small>{where}</small></span>{pill}</a>')
         parts.append('</div>')
     parts.append('<a class="apps-all" href="/#apps">All apps →</a></div></div><!-- apps-menu:end -->')
     return ''.join(parts)
