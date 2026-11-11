@@ -2,10 +2,24 @@
 
 Ticerapps' static GitHub Pages site, served at https://ticerapps.com (custom domain set
 on 2026-11-10; old `ticerapps.github.io/...` links redirect to the same path). No build
-step, analytics, cookies, third-party fonts, or trackers are added by this site. Two scripts
+step, analytics, cookies, third-party fonts, or trackers are added by this site. Three scripts
 exist: `assets/get.js` on the `/get/` download links below (reads the device type and the link's
-campaign tags, stores nothing) and `assets/minesweeper/guides.js` on the pattern guide (the
-practice boards; no network calls or storage). The header's Apps menu is HTML and CSS only.
+campaign tags, stores nothing), `assets/minesweeper/guides.js` on the pattern guide (the
+practice boards; no network calls or storage) and `assets/video.js` on app pages with a video
+(see Videos). The header's Apps menu is HTML and CSS only.
+
+## Videos
+
+App pages show their YouTube videos click-to-play: a `.video[data-yt]` box holds a still image
+hosted here (`assets/apps/<app>/video*.webp`) linked to the video on YouTube, and
+`assets/video.js` swaps it for YouTube's no-cookie player only when the visitor presses play.
+Nothing loads from YouTube before that, which keeps the no-trackers promise above; each app's
+privacy policy says so in its website section. The iframe sends `strict-origin-when-cross-origin`
+because YouTube's player refuses to load without a referrer, while the pages send none. Each
+video has VideoObject JSON-LD in the page head. Use `.video.tall` for a vertical Short and
+`.videos` for a row of them. Current videos (2026-11-11): Gem Sweeper `VK5VexWlyZ0`,
+Minesweeper: Strait of Hormuz `b3fSf2jTIck`, and on the Apportionment Calculator page the
+iOS `PwQH0BlwuKk`, Android Lite `UnJv9vU5REw` and Android Pro `B3Tlbm96bvs` Shorts.
 
 ## Pages
 
