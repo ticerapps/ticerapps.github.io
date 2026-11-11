@@ -10,7 +10,7 @@ practice boards; no network calls or storage). The header's Apps menu is HTML an
 ## Pages
 
 - `/`: home. Every public app with its stores, prices and ratings, Gem Sweeper as
-  coming soon, the browser Minesweeper band, guides, and social links.
+  the featured new game, the browser Minesweeper band, guides, and social links.
 - `/quilt-bee/`: Quilt Bee page and support (`#support`). Free on Google Play; the App
   Store is shown as coming soon until it is live there.
 - `/minesweeper-strait-of-hormuz/`: the game's page here. Its full home, guides and
@@ -29,8 +29,9 @@ practice boards; no network calls or storage). The header's Apps menu is HTML an
   the strait boards and a game-specific How to play page (controls, HUD, board sizes).
   Block puzzle and Tools have no hub yet: give each one only when it has a guide of its own,
   then make its Apps-menu heading a link in `tools/site_chrome.py`.
-- `/gem-sweeper/`: Gem Sweeper page and support, marked coming soon. When it launches,
-  swap the two dashed "Coming soon" store blocks for the official badges.
+- `/gem-sweeper/`: Gem Sweeper page and support. Free on Google Play since 2026-11-10 (Play title
+  "Gem Sweeper (Minesweeper)"); the App Store is shown as coming soon until it is live there
+  (its App Store name is "Gem Sweeper: Mine Puzzle").
 - `/support/`: privacy and support hub listing every app's policy.
 - `/quilt-bee/privacy/`, `/privacy/` (Minesweeper: Strait of
   Hormuz), `/gem-sweeper/privacy/`: policies. Store listings and released apps link to
@@ -57,7 +58,7 @@ YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
 | `ticerapps.com/get/minesweeper/` | App Store | Google Play | browser game | browser game |
 | `ticerapps.com/get/apportionment/` | App Store | Play, Lite | Mac App Store | app page |
 | `ticerapps.com/get/apportionment-pro/` | App Store | Play, Pro | Mac App Store | app page |
-| `ticerapps.com/get/gem-sweeper/` | Gem Sweeper page until launch | same | same | same |
+| `ticerapps.com/get/gem-sweeper/` | Gem Sweeper page (not on the App Store yet) | Google Play | app page | app page |
 
 - Each page also shows both store badges, so a visitor whose in-app browser blocks the
   automatic redirect can still tap through. Crawlers (link previews, ad review) stay on the

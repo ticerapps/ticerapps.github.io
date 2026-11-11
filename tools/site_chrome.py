@@ -18,7 +18,7 @@ CHEVRON = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="c
 GROUPS = [
     ("Minesweeper", ("/minesweeper/", "Games &amp; guides →"), [
         ("/minesweeper-strait-of-hormuz/", "minesweeper", "Minesweeper: Strait of Hormuz", "iOS · Android · browser", False),
-        ("/gem-sweeper/", "gem-sweeper", "Gem Sweeper", "iOS · Android", True),
+        ("/gem-sweeper/", "gem-sweeper", "Gem Sweeper", "Android · iOS soon", False),
     ]),
     ("Block puzzle", None, [
         ("/quilt-bee/", "quilt-bee", "Quilt Bee: Block Puzzle", "Android · iOS soon", False),
