@@ -17,7 +17,7 @@ Nothing loads from YouTube before that, which keeps the no-trackers promise abov
 privacy policy says so in its website section. The iframe sends `strict-origin-when-cross-origin`
 because YouTube's player refuses to load without a referrer, while the pages send none. Each
 video has VideoObject JSON-LD in the page head. Use `.video.tall` for a vertical Short and
-`.videos` for a row of them. Current videos (2026-11-11): Gem Sweeper `VK5VexWlyZ0`,
+`.videos` for a row of them. Current videos (2026-11-11): Gem Sweeper `VK5VexWlyZ0`, Quilt Bee `YscjTCfR6WM`,
 Minesweeper: Strait of Hormuz `b3fSf2jTIck`, and on the Apportionment Calculator page the
 iOS `PwQH0BlwuKk`, Android Lite `UnJv9vU5REw` and Android Pro `B3Tlbm96bvs` Shorts.
 
