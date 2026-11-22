@@ -21,7 +21,7 @@ GROUPS = [
         ("/gem-sweeper/", "gem-sweeper", "Gem Sweeper", "Android · iOS soon", False),
     ]),
     ("Block puzzle", None, [
-        ("/quilt-bee/", "quilt-bee", "Quilt Bee: Block Puzzle", "Android · iOS soon", False),
+        ("/quilt-bee/", "quilt-bee", "Quilt Bee: Block Puzzle", "iOS · Android", False),
     ]),
     ("Tools", None, [
         ("/apportionment-calculator/", "apportionment", "Apportionment Calculator", "iPhone · iPad · Mac", False),

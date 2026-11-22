@@ -25,8 +25,8 @@ iOS `PwQH0BlwuKk`, Android Lite `UnJv9vU5REw` and Android Pro `B3Tlbm96bvs` Shor
 
 - `/`: home. Every public app with its stores, prices and ratings, Gem Sweeper as
   the featured new game, the browser Minesweeper band, guides, and social links.
-- `/quilt-bee/`: Quilt Bee page and support (`#support`). Free on Google Play; the App
-  Store is shown as coming soon until it is live there.
+- `/quilt-bee/`: Quilt Bee page and support (`#support`). Free on the App Store (since
+  2026-11-21) and Google Play.
 - `/minesweeper-strait-of-hormuz/`: the game's page here. Its full home, guides and
   browser demo are the separate site minesweeperstraitofhormuz.com
   (repo `ticerapps/minesweeperstraitofhormuz.com`). Google Play lists it as
@@ -68,7 +68,7 @@ YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
 
 | Link | iPhone / iPad | Android | Mac | Other computers |
 | --- | --- | --- | --- | --- |
-| `ticerapps.com/get/quilt-bee/` | Quilt Bee page (not on the App Store yet) | Google Play | app page | app page |
+| `ticerapps.com/get/quilt-bee/` | App Store | Google Play | app page | app page |
 | `ticerapps.com/get/minesweeper/` | App Store | Google Play | browser game | browser game |
 | `ticerapps.com/get/apportionment/` | App Store | Play, Lite | Mac App Store | app page |
 | `ticerapps.com/get/apportionment-pro/` | App Store | Play, Pro | Mac App Store | app page |
