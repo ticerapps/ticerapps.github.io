@@ -17,7 +17,7 @@ CHEVRON = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="c
 # Category heading (link or None), then the apps under it.
 GROUPS = [
     ("Minesweeper", ("/minesweeper/", "Games &amp; guides →"), [
-        ("/minesweeper-strait-of-hormuz/", "minesweeper", "Minesweeper: Strait of Hormuz", "iOS · Android · browser", False),
+        ("/minesweeper-strait-of-hormuz/", "minesweeper", "Strait Sweeper", "iOS · Android", False),
         ("/gem-sweeper/", "gem-sweeper", "Gem Sweeper", "Android · iOS soon", False),
     ]),
     ("Block puzzle", None, [

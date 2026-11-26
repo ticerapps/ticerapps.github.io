@@ -18,19 +18,18 @@ privacy policy says so in its website section. The iframe sends `strict-origin-w
 because YouTube's player refuses to load without a referrer, while the pages send none. Each
 video has VideoObject JSON-LD in the page head. Use `.video.tall` for a vertical Short and
 `.videos` for a row of them. Current videos (2026-11-11): Gem Sweeper `VK5VexWlyZ0`, Quilt Bee `YscjTCfR6WM`,
-Minesweeper: Strait of Hormuz `b3fSf2jTIck`, and on the Apportionment Calculator page the
+Strait Sweeper `b3fSf2jTIck`, and on the Apportionment Calculator page the
 iOS `PwQH0BlwuKk`, Android Lite `UnJv9vU5REw` and Android Pro `B3Tlbm96bvs` Shorts.
 
 ## Pages
 
 - `/`: home. Every public app with its stores, prices and ratings, Gem Sweeper as
-  the featured new game, the browser Minesweeper band, guides, and social links.
+  the featured new game, and guides.
 - `/quilt-bee/`: Quilt Bee page and support (`#support`). Free on the App Store (since
   2026-11-21) and Google Play.
-- `/minesweeper-strait-of-hormuz/`: the game's page here. Its full home, guides and
-  browser demo are the separate site minesweeperstraitofhormuz.com
-  (repo `ticerapps/minesweeperstraitofhormuz.com`). Google Play lists it as
-  "Minesweeper: REDACTED".
+- `/minesweeper-strait-of-hormuz/`: the Strait Sweeper app page. The existing path stays
+  available for bookmarks and store links; the site presents the game as Strait Sweeper.
+  Keep calls to action on this domain or the app stores.
 - `/apportionment-calculator/`: **not in this repo.** It is the project site of
   `ticerapps/apportionment-calculator` (index.html is the app page and support URL,
   privacy.html the policy). It uses this repo's `/assets/` and `/favicon.svg`. Never
@@ -38,17 +37,15 @@ iOS `PwQH0BlwuKk`, Android Lite `UnJv9vU5REw` and Android Pro `B3Tlbm96bvs` Shor
 - `/minesweeper/`: the Minesweeper hub, added 2026-11-10: both Minesweeper games, the guides,
   the pattern library and an FAQ (FAQPage structured data). The guides live under it:
   `/minesweeper/how-to-play/` (general rules), `/minesweeper/strategy/` (12 patterns and the
-  practice lessons) and `/minesweeper/no-guess/`. The pattern and no-guess guides moved here from
-  minesweeperstraitofhormuz.com, whose old URLs now redirect; that site keeps the browser game,
-  the strait boards and a game-specific How to play page (controls, HUD, board sizes).
+  practice lessons) and `/minesweeper/no-guess/`. The pattern and no-guess guides
+  include local interactive practice and link to the app pages on this domain.
   Block puzzle and Tools have no hub yet: give each one only when it has a guide of its own,
   then make its Apps-menu heading a link in `tools/site_chrome.py`.
 - `/gem-sweeper/`: Gem Sweeper page and support. Free on Google Play since 2026-11-10 (Play title
   "Gem Sweeper (Minesweeper)"); the App Store is shown as coming soon until it is live there
   (its App Store name is "Gem Sweeper: Mine Puzzle").
 - `/support/`: privacy and support hub listing every app's policy.
-- `/quilt-bee/privacy/`, `/privacy/` (Minesweeper: Strait of
-  Hormuz), `/gem-sweeper/privacy/`: policies. Store listings and released apps link to
+- `/quilt-bee/privacy/`, `/privacy/` (Strait Sweeper), `/gem-sweeper/privacy/`: policies. Store listings and released apps link to
   these exact URLs; never move them. The 2026-11-10 redesign changed only their header,
   footer and stylesheet, not their text.
 - `/quilt-bee/delete-data/` was removed on 2026-11-10 at the owner's request: current Quilt Bee
@@ -69,7 +66,7 @@ YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
 | Link | iPhone / iPad | Android | Mac | Other computers |
 | --- | --- | --- | --- | --- |
 | `ticerapps.com/get/quilt-bee/` | App Store | Google Play | app page | app page |
-| `ticerapps.com/get/minesweeper/` | App Store | Google Play | browser game | browser game |
+| `ticerapps.com/get/minesweeper/` | App Store | Google Play | app page | app page |
 | `ticerapps.com/get/apportionment/` | App Store | Play, Lite | Mac App Store | app page |
 | `ticerapps.com/get/apportionment-pro/` | App Store | Play, Pro | Mac App Store | app page |
 | `ticerapps.com/get/gem-sweeper/` | Gem Sweeper page (not on the App Store yet) | Google Play | app page | app page |
@@ -110,8 +107,7 @@ YouTube, Snapchat, Reddit, X, QR codes, a bio link or anywhere else:
   `apple-touch-icon.png` at the root are made from it.
 - `assets/fonts/`: self-hosted Inter and Space Grotesk (latin subsets, SIL OFL; licences
   beside them).
-- `assets/badges/`: official App Store and Google Play badges, copied from the
-  minesweeperstraitofhormuz.com repo.
+- `assets/badges/`: official App Store and Google Play badges.
 - `assets/apps/<app>/`: 384px WebP icons and 540px-wide WebP screenshots. Quilt Bee's icon
   is the one Google Play serves; screenshots come from each game's store listing assets.
   `quilt-bee/assets/icon-512.png` is the earlier plush-bee icon, kept for old links.

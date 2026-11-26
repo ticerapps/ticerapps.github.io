@@ -16,7 +16,7 @@ from practice import render_practice
 
 ROOT = Path(__file__).resolve().parents[2]
 PAGE = ROOT / 'minesweeper/strategy/index.html'
-PLAY = 'https://minesweeperstraitofhormuz.com/#play'
+GAME_PAGE = '/minesweeper-strait-of-hormuz/'
 
 
 def board(p, quiz=False):
@@ -53,7 +53,7 @@ def article():
 {render_practice()}
 <h2 class="pattern-library-heading" id="library">The pattern library</h2>
 <div class="pattern-cards">{''.join(cards)}</div>
-<div class="guide-end"><section><h2>Chord once the flags are proven.</h2><p>When the adjacent flags match a number, tap that number to open its remaining neighbours. Chording trusts your flags; it does not check whether they are correct.</p></section><section><h2>Mind the edges of odd shapes.</h2><p>Boards that are not rectangles, like the coastline boards in Minesweeper: Strait of Hormuz, use the same eight-neighbour rule, diagonals included. Land removes neighbours, so count the actual tiles before applying an edge pattern.</p></section><section><h2>A zero counter is not proof.</h2><p>The mine counter subtracts placed flags, including wrong ones. Only treat the remaining tiles as safe when every flag is justified and every mine is accounted for.</p></section><section><h2>Keep learning.</h2><p>Try these reads on the <a href="{PLAY}">free browser boards</a>, or learn them one at a time in <a href="/gem-sweeper/">Gem Sweeper</a>’s 50 teaching puzzles. For more community terminology, see <a href="https://minesweeper.online/help/patterns">Minesweeper Online’s pattern reference</a>. Diagrams on this page are our own.</p></section></div>'''
+<div class="guide-end"><section><h2>Chord once the flags are proven.</h2><p>When the adjacent flags match a number, tap that number to open its remaining neighbours. Chording trusts your flags; it does not check whether they are correct.</p></section><section><h2>Mind the edges of odd shapes.</h2><p>Boards that are not rectangles, like the coastline boards in Strait Sweeper, use the same eight-neighbour rule, diagonals included. Land removes neighbours, so count the actual tiles before applying an edge pattern.</p></section><section><h2>A zero counter is not proof.</h2><p>The mine counter subtracts placed flags, including wrong ones. Only treat the remaining tiles as safe when every flag is justified and every mine is accounted for.</p></section><section><h2>Keep learning.</h2><p>Try these reads on the <a href="{GAME_PAGE}">coastal boards in Strait Sweeper</a>, or learn them one at a time in <a href="/gem-sweeper/">Gem Sweeper</a>’s 50 teaching puzzles. For more community terminology, see <a href="https://minesweeper.online/help/patterns">Minesweeper Online’s pattern reference</a>. Diagrams on this page are our own.</p></section></div>'''
 
 
 def main():

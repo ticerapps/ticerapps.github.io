@@ -1,5 +1,5 @@
 /* Minesweeper guides: the 1–2–1 quiz, Show solution buttons and the two practice lessons.
-   Works locally: no network calls, storage or saved progress. Ported from minesweeperstraitofhormuz.com. */
+   Works locally: no network calls, storage or saved progress. */
 (() => {
   'use strict';
   document.documentElement.classList.add('js');

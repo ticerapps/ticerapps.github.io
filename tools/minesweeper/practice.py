@@ -1,5 +1,5 @@
 """Small, progressively enhanced lessons using the solver-verified patterns.
-Ported from the minesweeperstraitofhormuz.com repo on 2026-11-10."""
+Local interactive practice for the Ticerapps strategy guide."""
 from patterns import PATTERNS
 
 
@@ -54,5 +54,5 @@ def render_practice():
   <div class="lesson-controls"><button type="button" class="lesson-button" data-reduction-next disabled>Subtract the flag →</button><button type="button" class="text-button" data-reduction-reset disabled>Start over</button></div>
   <noscript><p>The four steps beside this board contain the complete solution. No JavaScript is needed to read them.</p></noscript></div>
 </section>
-<div class="practice-cta"><p>Ready to use it on a real board?</p><a class="btn btn-primary" href="https://minesweeperstraitofhormuz.com/#play">Try the free browser game <span aria-hidden="true">→</span></a><a href="#all-mines">Explore all 12 patterns ↓</a></div>
+<div class="practice-cta"><p>Ready to use it on a real board?</p><a class="btn btn-primary" href="/minesweeper-strait-of-hormuz/">Explore Strait Sweeper</a><a href="#all-mines">Explore all 12 patterns ↓</a></div>
 </div>'''

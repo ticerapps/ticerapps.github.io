@@ -1,5 +1,5 @@
 /* Minesweeper guides: tile diagrams, the pattern library and the practice lessons.
-   Loaded only on /minesweeper/ guide pages. Ported from minesweeperstraitofhormuz.com (2026-11-10). */
+   Loaded only on /minesweeper/ guide pages. */
 .ms-guide { --tile-font: var(--display); --edge: var(--line); }
 
 /* Small rule diagrams (how to play) */
